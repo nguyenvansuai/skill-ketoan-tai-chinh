@@ -76,6 +76,10 @@ def cong_thue(dt_nam_truoc, dt_hien_tai):
     if can_cu is not None:
         co.append("Khai GTGT theo QUÝ (doanh thu năm trước ≤ 50 tỷ)" if can_cu <= 50e9 else "Khai GTGT theo THÁNG (doanh thu năm trước > 50 tỷ)")
         co[-1] += " [cần kiểm tra NĐ 252/2026]."
+    if dt_hien_tai is not None:
+        co.append("GTGT: doanh thu năm dưới 1 tỷ → mặc định phương pháp trực tiếp theo doanh thu, được đăng ký tự nguyện khấu trừ "
+                  "(Luật 48/2024 Đ.11 k.2, Đ.12 k.2)" if dt_hien_tai < 1e9 else
+                  "GTGT: doanh thu năm từ 1 tỷ trở lên, làm đủ sổ sách → phương pháp khấu trừ (Luật 48/2024 Đ.11 k.2 điểm a)")
     co.append("Lệ phí môn bài: không còn thu từ 01/01/2026 (NQ 198/2025 Đ.10 k.7).")
     return co
 

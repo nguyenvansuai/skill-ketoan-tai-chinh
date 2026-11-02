@@ -9,6 +9,7 @@ Thu nhập tính thuế = (lợi nhuận kế toán + điều chỉnh tăng − 
 | Khoản | Căn cứ / ghi chú | Lấy số ở đâu |
 |---|---|---|
 | Khoản chi **từ 5 triệu đồng** không có chứng từ thanh toán không dùng tiền mặt | NĐ 320/2025 (trước đây 20 triệu) – TC | Sổ quỹ 111, cảnh báo của `dinh-khoan/scripts/kiem_tra_but_toan.py` |
+| Thuế GTGT đầu vào của khoản mua **không có chứng từ thanh toán không dùng tiền mặt** đã ghi vào chi phí | Luật 48/2024 Đ.14 k.1 điểm e – NV | TK 1331 bị loại, 6421/6422 |
 | Tiền lương, thù lao của chủ DNTN, chủ công ty TNHH MTV là cá nhân | Luật 67/2025 Đ.9 k.2 điểm h – NV | Bảng lương, TK 334 chi tiết chủ DN |
 | Chi không có hóa đơn, chứng từ hợp pháp; hóa đơn bất hợp pháp, người bán bỏ địa chỉ | Nguyên tắc chi phí được trừ – TC | Bảng kê `doc-hoa-don-xml`, tra cứu MST |
 | Chi không phục vụ hoạt động sản xuất kinh doanh (chi cá nhân, gia đình) | Nguyên tắc chi phí được trừ | Sổ chi tiết 6421, 6422, 811 |

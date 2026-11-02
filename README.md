@@ -6,6 +6,16 @@ Mọi skill theo cùng nguyên tắc: **không bịa, không đoán số** (ch�
 
 > Hộ kinh doanh, cá nhân kinh doanh: dùng bộ [skill-ho-kinh-doanh](https://github.com/nguyenvansuai/skill-ho-kinh-doanh). Thuế TNCN cá nhân (quyết toán, người phụ thuộc, người nước ngoài): dùng thêm [tndvnn/tncn](https://github.com/tndvnn/tncn).
 
+## Tải nhanh – không cần cài
+
+| File | Dùng để |
+|---|---|
+| [`qua-tang/10_cau_lenh_AI_cho_Ke_toan_DNNVV.pdf`](qua-tang/10_cau_lenh_AI_cho_Ke_toan_DNNVV.pdf) | 10 câu lệnh sao chép dán vào ChatGPT, Claude: định khoản, bảng kê hóa đơn, đối soát, khóa sổ, BCTC, GTGT, TNDN |
+| [`qua-tang/Mau_so_ke_toan_DNNVV_TT133.xlsx`](qua-tang/Mau_so_ke_toan_DNNVV_TT133.xlsx) | Nhập số dư đầu kỳ + Sổ Nhật ký chung → file tự lập Bảng cân đối phát sinh, B02-DNN, B01a-DNN bằng công thức, có dòng kiểm tra tài sản = nguồn vốn |
+| [`van-ban/`](van-ban) | Toàn văn Luật GTGT 48/2024, Luật Quản lý thuế 108/2025, Luật 09/2026, NĐ 141/2026, NĐ 254/2026 (bản chữ) + đường dẫn chính thức các văn bản còn lại |
+
+Trên điện thoại: bấm vào tên file → nút **Download** (biểu tượng tải xuống) góc phải.
+
 ## Danh sách skill
 
 | # | Skill | Lệnh | Làm gì |
@@ -33,12 +43,26 @@ Sau đó nói tự nhiên: "định khoản giúp tôi nghiệp vụ này", "đ�
 
 ### Claude Code – cài qua plugin marketplace
 
+Cài cả bộ 8 skill (một lệnh, Claude Code 2.1.275 trở lên):
+
 ```
-/plugin marketplace add nguyenvansuai/skill-ketoan-tai-chinh
-/plugin install thue-tndn@skill-ketoan-tai-chinh
+/plugin install tron-bo-skill-ke-toan --marketplace nguyenvansuai/skill-ketoan-tai-chinh
 ```
 
-Cài cả bộ: `/plugin install tron-bo-skill-ke-toan@skill-ketoan-tai-chinh`. Tên để cài là cột **Lệnh** (bỏ dấu `/`). Cập nhật: `/plugin marketplace update skill-ketoan-tai-chinh`.
+Hoặc cài từng skill:
+
+```
+/plugin install che-do-ke-toan --marketplace nguyenvansuai/skill-ketoan-tai-chinh
+/plugin install dinh-khoan --marketplace nguyenvansuai/skill-ketoan-tai-chinh
+/plugin install doc-hoa-don-xml --marketplace nguyenvansuai/skill-ketoan-tai-chinh
+/plugin install doi-soat --marketplace nguyenvansuai/skill-ketoan-tai-chinh
+/plugin install khoa-so-cuoi-ky --marketplace nguyenvansuai/skill-ketoan-tai-chinh
+/plugin install bao-cao-tai-chinh --marketplace nguyenvansuai/skill-ketoan-tai-chinh
+/plugin install thue-gtgt-dn --marketplace nguyenvansuai/skill-ketoan-tai-chinh
+/plugin install thue-tndn --marketplace nguyenvansuai/skill-ketoan-tai-chinh
+```
+
+Claude Code bản cũ hơn: chạy `/plugin marketplace add nguyenvansuai/skill-ketoan-tai-chinh` một lần, rồi `/plugin install <tên-skill>@skill-ketoan-tai-chinh`. Cập nhật bản mới: `/plugin marketplace update skill-ketoan-tai-chinh`.
 
 ### Claude Code – chép thủ công
 
@@ -91,6 +115,8 @@ skills/<tên-skill>/references/     # tài liệu (bản chép từ shared/ + t�
 skills/<tên-skill>/scripts/        # script hỗ trợ
 shared/                            # nguồn gốc tài liệu dùng chung
 chatgpt/  dist/  .claude-plugin/   # sinh tự động bởi scripts/build.py
+qua-tang/                          # PDF 10 câu lệnh + Excel mẫu sổ (sinh bởi scripts/in_qua_tang_pdf.py, tao_qua_tang_excel.py)
+van-ban/                           # văn bản pháp luật gốc (bản chữ)
 ```
 
 Sửa tài liệu dùng chung ở `shared/` rồi chạy `python3 scripts/build.py --test`.

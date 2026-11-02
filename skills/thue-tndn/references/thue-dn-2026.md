@@ -7,19 +7,23 @@
 ### 1.1 Phương pháp
 | Phương pháp | Ai | Cách tính |
 |---|---|---|
-| **Khấu trừ** | DN có sổ sách, hóa đơn, chứng từ đầy đủ (mặc định của DN) | GTGT phải nộp = GTGT đầu ra − GTGT đầu vào **đủ điều kiện khấu trừ** |
-| **Trực tiếp (% doanh thu)** | DN không đủ điều kiện khấu trừ theo Luật GTGT 48/2024 – không phải quyền tự chọn | Tỷ lệ % × doanh thu: phân phối, cung cấp hàng hóa 1%; dịch vụ, xây dựng không bao thầu vật tư 5%; sản xuất, vận tải, dịch vụ gắn hàng hóa, xây dựng có bao thầu vật tư 3%; khác 2% |
+| **Khấu trừ** (Luật 48/2024 Đ.11) | DN thực hiện đầy đủ chế độ kế toán, hóa đơn, chứng từ **và** (a) doanh thu bán hàng, dịch vụ hằng năm **từ 1 tỷ đồng trở lên**, hoặc (b) **tự nguyện** áp dụng (Đ.11 k.2) | GTGT phải nộp = GTGT đầu ra − GTGT đầu vào **đủ điều kiện khấu trừ** (Đ.11 k.1) |
+| **Trực tiếp theo doanh thu** (Đ.12 k.2) | DN, HTX doanh thu hằng năm **dưới 1 tỷ đồng**, **trừ** khi tự nguyện khấu trừ; tổ chức khác không thuộc Đ.11 k.2 | Tỷ lệ % × doanh thu (Đ.12 k.2 điểm b): phân phối, cung cấp hàng hóa 1%; dịch vụ, xây dựng không bao thầu nguyên vật liệu 5%; sản xuất, vận tải, dịch vụ gắn hàng hóa, xây dựng có bao thầu nguyên vật liệu 3%; khác 2% |
 
-TNDN theo % doanh thu **không tự động** làm mất quyền khấu trừ GTGT – đánh giá GTGT độc lập với TNDN.
+- Căn cứ: nguyên văn Luật 48/2024/QH15 Đ.11–12 (bản vbpl.vn lấy 30/10/2026, thư mục `van-ban/` của repo). Có sửa đổi bởi Luật 149/2025/QH15 **[cần kiểm tra]** các khoản này; cách xác định "doanh thu hằng năm" và thủ tục đăng ký tự nguyện theo nghị định hướng dẫn **[cần kiểm tra]**.
+- DN doanh thu dưới 1 tỷ **được chọn** khấu trừ (đăng ký tự nguyện) – nên cân nhắc khi mua vào nhiều có thuế GTGT. DN từ 1 tỷ trở lên làm đủ sổ sách thì **không** dùng phương pháp trực tiếp.
+- TNDN theo % doanh thu **không tự động** làm mất quyền khấu trừ GTGT – đánh giá GTGT độc lập với TNDN.
 
 ### 1.2 Thuế suất
 - 0% (xuất khẩu, điều kiện riêng); 5%; 10%.
 - **Giảm 10% → 8%** từ 01/07/2025 đến **31/12/2026** (NĐ 174/2025 theo NQ 204/2025), **trừ** Phụ lục I (viễn thông, tài chính, ngân hàng, chứng khoán, bảo hiểm, bất động sản, kim loại, khai khoáng trừ than…) và Phụ lục II (hàng chịu thuế TTĐB). Phương pháp trực tiếp: giảm 20% tỷ lệ %. **[cần kiểm tra]** gia hạn sau 31/12/2026.
 
-### 1.3 Điều kiện khấu trừ đầu vào (Luật GTGT 48/2024; NĐ 181/2025 Đ.26) – [cần kiểm tra nguyên văn]
-1. Có hóa đơn GTGT hợp pháp (hoặc chứng từ nộp thuế GTGT khâu nhập khẩu).
-2. Có **chứng từ thanh toán không dùng tiền mặt** với hóa đơn **từ 5 triệu đồng trở lên (giá đã có thuế)**; nhiều hóa đơn của **cùng người bán trong cùng ngày** cộng lại từ 5 triệu cũng phải chuyển khoản.
-3. Hàng hóa, dịch vụ dùng cho hoạt động chịu thuế GTGT.
+### 1.3 Điều kiện khấu trừ đầu vào (Luật 48/2024 Đ.14 – NV; ngưỡng tại NĐ 181/2025 Đ.26 – TC)
+1. Có hóa đơn GTGT (hoặc chứng từ nộp thuế GTGT khâu nhập khẩu, chứng từ nộp thuế thay cho phía nước ngoài) – Đ.14 k.2 điểm a.
+2. Có **chứng từ thanh toán không dùng tiền mặt** đối với hàng hóa, dịch vụ mua vào, trừ trường hợp đặc thù Chính phủ quy định (Đ.14 k.2 điểm b). NĐ 181/2025 Đ.26: áp dụng với hóa đơn **từ 5 triệu đồng trở lên (giá đã có thuế)**; nhiều lần mua của **cùng người bán trong cùng ngày** cộng lại từ 5 triệu cũng phải thanh toán không dùng tiền mặt.
+3. Dùng cho hoạt động chịu thuế GTGT; dùng chung cho hoạt động chịu thuế và không chịu thuế mà không hạch toán riêng được → khấu trừ theo **tỷ lệ doanh thu chịu thuế / tổng doanh thu** (Đ.14 k.1 điểm b).
+4. Đầu vào chưa khấu trừ hết trong tháng, quý được chuyển sang kỳ sau (Đ.14 k.1 điểm đ).
+5. Thuế GTGT đầu vào không được khấu trừ được tính vào chi phí TNDN hoặc nguyên giá TSCĐ, **trừ** thuế GTGT của hàng hóa, dịch vụ mua vào **không có chứng từ thanh toán không dùng tiền mặt** (Đ.14 k.1 điểm e) → khoản này vừa mất khấu trừ vừa không được tính chi phí.
 - DN ủy quyền nhân viên thanh toán rồi hoàn trả: vẫn được khấu trừ nếu có quy chế ủy quyền và chứng từ (TC).
 - Mua trả chậm: kiểm tra quy định chứng từ thanh toán đến hạn **[cần kiểm tra]**.
 
@@ -93,7 +97,7 @@ Phát sinh khi DN Việt Nam trả tiền cho tổ chức, cá nhân nước ngo
 
 - GTGT nhà thầu = doanh thu tính thuế GTGT × tỷ lệ (TT 69/2025 Đ.9): hàng hóa 1%; dịch vụ, cho thuê máy móc thiết bị, bảo hiểm 5%; dịch vụ gắn hàng hóa 3%; khác 2%.
 - TNDN nhà thầu = doanh thu tính thuế TNDN × tỷ lệ (NĐ 320/2025 Đ.12): thương mại hàng hóa 1%; dịch vụ 5%; lãi tiền vay 5%; bản quyền 10%; cho thuê máy móc thiết bị 5%; xây lắp 2%; vận chuyển 2%…
-- Hợp đồng giá **chưa gồm thuế (net)**: phải quy đổi gross-up. Script tính: skill `thue-nha-thau` (sắp có).
+- Hợp đồng giá **chưa gồm thuế (net)**: phải quy đổi gross-up. Công thức quy đổi theo TT 20/2026 **[cần kiểm tra]**; cách phổ biến: doanh thu tính TNDN = giá net ÷ (1 − tỷ lệ TNDN), doanh thu tính GTGT = doanh thu tính TNDN ÷ (1 − tỷ lệ GTGT).
 - Mua dịch vụ số qua nền tảng nước ngoài (quảng cáo Facebook, Google, TikTok, SaaS, cloud): nhà cung cấp đã **đăng ký, khai nộp thuế trực tiếp** qua Cổng thông tin cho nhà cung cấp nước ngoài thì bên mua thường không khấu trừ lại – **[cần kiểm tra]** quy định hiện hành và tình trạng đăng ký của từng nhà cung cấp; chưa rõ thì hỏi cơ quan thuế, lưu hóa đơn/chứng từ thanh toán.
 
 ## 6. Lịch khai, nộp (NĐ 252/2026 Đ.10, Đ.24; hạn trùng ngày nghỉ lùi sang ngày làm việc tiếp theo – Đ.3 k.7)
@@ -108,7 +112,7 @@ Phát sinh khi DN Việt Nam trả tiền cho tổ chức, cá nhân nước ngo
 | Thuế nhà thầu (từng lần) | Theo từng lần thanh toán – xem TT 89/2026 **[cần kiểm tra số ngày]** |
 | Lệ phí môn bài | **Không còn** từ 01/01/2026 (NQ 198/2025) – chỉ rà nợ tồn đọng trước 2026 |
 
-Hạn nộp tiền = hạn nộp hồ sơ khai. Lịch tự động: skill `lich-thue-dn` (sắp có).
+Hạn nộp tiền = hạn nộp hồ sơ khai.
 
 ## 6a. Gia hạn nộp thuế năm 2026 (NĐ 245/2026/NĐ-CP – TC)
 

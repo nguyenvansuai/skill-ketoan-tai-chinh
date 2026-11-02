@@ -5,9 +5,9 @@ A. Phương pháp KHẤU TRỪ – đầu vào là bảng kê hóa đơn CSV (xu
    chieu (mua-vao | ban-ra), ngay, ban_mst, ban_ten, so, tien_hang, tien_thue[, tsuat][, thanh_toan][, loai_tru]
    thanh_toan: CK (không dùng tiền mặt) | TM (tiền mặt) | trống (chưa thanh toán / chưa rõ)
    loai_tru:   x nếu hóa đơn dùng cho hoạt động không chịu thuế, phúc lợi không đủ điều kiện… (loại khỏi khấu trừ)
-   Điều kiện khấu trừ (Luật GTGT 48/2024; NĐ 181/2025 Đ.26 – [cần kiểm tra]): hóa đơn hợp pháp + chứng từ thanh toán không
+   Điều kiện khấu trừ (Luật GTGT 48/2024 Đ.14 k.2; ngưỡng 5 triệu tại NĐ 181/2025 Đ.26 – TC): hóa đơn hợp pháp + chứng từ thanh toán không
    dùng tiền mặt khi hóa đơn (hoặc tổng hóa đơn cùng người bán cùng ngày) từ 5 triệu đồng trở lên (giá đã có thuế).
-B. Phương pháp TRỰC TIẾP (% doanh thu, Luật GTGT 48/2024): --truc-tiep hang-hoa=… dich-vu=… san-xuat=… khac=…
+B. Phương pháp TRỰC TIẾP (% doanh thu, Luật GTGT 48/2024 Đ.12 k.2 – DN doanh thu năm dưới 1 tỷ, trừ khi tự nguyện khấu trừ): --truc-tiep hang-hoa=… dich-vu=… san-xuat=… khac=…
    Giảm 20% tỷ lệ % đến 31/12/2026 cho nhóm được giảm (NĐ 174/2025): thêm --giam-20 (tự xác định nhóm được giảm).
 
   python3 tinh_gtgt.py bang_ke_q3.csv --con-khau-tru-ky-truoc 12000000
@@ -108,13 +108,13 @@ def main(argv=None):
                 ap.error(f"ngành {k} không hợp lệ; chọn {', '.join(TY_LE_TT)}")
             dt_[k] = float(val)
         dong, tong = truc_tiep(dt_, a.giam_20)
-        print("THUẾ GTGT – PHƯƠNG PHÁP TRỰC TIẾP (% doanh thu, Luật GTGT 48/2024)")
+        print("THUẾ GTGT – PHƯƠNG PHÁP TRỰC TIẾP (% doanh thu, Luật GTGT 48/2024 Đ.12 k.2)")
         for nganh, v, tl, thue in dong:
             print(f"  {nganh:10} doanh thu {d(v):>16} × {tl * 100:.2f}% = {d(thue):>14}")
         print(f"  PHẢI NỘP {d(tong):>45}")
         if a.giam_20:
             print("  Đã giảm 20% tỷ lệ (NĐ 174/2025, đến 31/12/2026) – chỉ đúng với hàng hóa, dịch vụ được giảm; ghi chú trên hóa đơn.")
-        print("Đã kiểm tra phép tính. Phương pháp trực tiếp chỉ áp dụng khi DN không đủ điều kiện khấu trừ theo luật – không phải quyền tự chọn.")
+        print("Đã kiểm tra phép tính. Phương pháp trực tiếp áp dụng cho DN doanh thu năm dưới 1 tỷ chưa đăng ký tự nguyện khấu trừ (Luật 48/2024 Đ.11 k.2, Đ.12 k.2).")
         return 0
     if not a.file:
         ap.error("cần file bảng kê hoặc --truc-tiep")

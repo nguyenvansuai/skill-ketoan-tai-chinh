@@ -24,7 +24,7 @@
 
 | Văn bản | Nội dung | Hiệu lực | Tin cậy |
 |---|---|---|---|
-| **Luật TNDN 67/2025/QH15** | Thuế suất 20% chung; **15%** nếu doanh thu căn cứ ≤3 tỷ, **17%** nếu >3 tỷ đến ≤50 tỷ (Đ.10 k.1–3); doanh thu căn cứ là tổng doanh thu **kỳ tính thuế trước liền kề** (Đ.18 k.4); lương chủ DN tư nhân/TNHH MTV cá nhân không được trừ (Đ.9 k.2 điểm h); nhánh % doanh thu (Đ.11 k.2 điểm b) | 01/10/2025, áp dụng kỳ 2025 | NV |
+| **Luật TNDN 67/2025/QH15** (sửa bởi Luật 116, 127, 133, 141, 143/2025 và Luật 09/2026 – theo căn cứ NĐ 141/2026; nội dung sửa **[cần kiểm tra]**) | Thuế suất 20% chung; **15%** nếu doanh thu căn cứ ≤3 tỷ, **17%** nếu >3 tỷ đến ≤50 tỷ (Đ.10 k.1–3); doanh thu căn cứ là tổng doanh thu **kỳ tính thuế trước liền kề** (Đ.18 k.4); lương chủ DN tư nhân/TNHH MTV cá nhân không được trừ (Đ.9 k.2 điểm h); nhánh % doanh thu (Đ.11 k.2 điểm b) | 01/10/2025, áp dụng kỳ 2025 | NV |
 | **NĐ 320/2025/NĐ-CP** | Hướng dẫn Luật 67: cách xác định, quy đổi doanh thu căn cứ (Đ.11); tỷ lệ TNDN trên doanh thu khi không xác định được chi phí (Đ.12 k.4); chi phí được trừ: **khoản chi từ 5 triệu đồng phải có chứng từ thanh toán không dùng tiền mặt** (trước đây 20 triệu) | 15/12/2025 | NV (Đ.11–12); ngưỡng 5 triệu TC |
 | TT 20/2026/TT-BTC | Hướng dẫn thuế TNDN (kể cả TNDN nhà thầu nước ngoài) | 2026 | TC |
 | Luật 09/2026/QH16 + **NĐ 141/2026/NĐ-CP** | **Miễn TNDN** cho DN có tổng doanh thu năm **≤1 tỷ** (có điều kiện, có quy tắc DN mới, ngoại lệ liên kết) | 01/01/2026 | NV |
@@ -35,7 +35,7 @@
 
 | Văn bản | Nội dung | Hiệu lực | Tin cậy |
 |---|---|---|---|
-| Luật GTGT 48/2024/QH15 (sửa bởi Luật 149/2025/QH15, Luật 09/2026/QH16) | Thuế suất 0%, 5%, 10%; phương pháp khấu trừ và phương pháp trực tiếp (% doanh thu); điều kiện khấu trừ đầu vào: hóa đơn GTGT + **chứng từ thanh toán không dùng tiền mặt**. Điều kiện GTGT đánh giá **độc lập** với TNDN (Bộ Tài chính trả lời 21/04/2026, portal.mof.gov.vn/hoidapcstc/home/cthoidap/161261) | 01/07/2025 | TC – **chưa chốt số điều**, không trích số điều khi trả lời |
+| Luật GTGT 48/2024/QH15 (sửa bởi Luật 149/2025/QH15, Luật 09/2026/QH16) | Thuế suất 0%, 5%, 10% (Đ.9); **khấu trừ** cho cơ sở doanh thu năm từ 1 tỷ hoặc tự nguyện (Đ.11 k.2); **trực tiếp theo doanh thu** cho DN doanh thu dưới 1 tỷ trừ khi tự nguyện khấu trừ, tỷ lệ 1%/5%/3%/2% (Đ.12 k.2); khấu trừ đầu vào, phân bổ theo tỷ lệ doanh thu, chuyển kỳ sau, GTGT không có chứng từ không dùng tiền mặt không được tính chi phí (Đ.14 k.1); **điều kiện khấu trừ** (Đ.14 k.2). Điều kiện GTGT đánh giá độc lập với TNDN (Bộ Tài chính trả lời 21/04/2026) | 01/07/2025 | NV bản gốc (vbpl.vn, `van-ban/`); sửa đổi của Luật 149/2025 tại các điều này **[cần kiểm tra]** |
 | NĐ 181/2025/NĐ-CP + TT 69/2025/TT-BTC | Hướng dẫn Luật GTGT: ngưỡng **từ 5 triệu đồng** (gồm thuế) phải thanh toán không dùng tiền mặt mới được khấu trừ (trước đây 20 triệu); trong một ngày mua nhiều lần của cùng người bán tổng từ 5 triệu cũng phải thanh toán không dùng tiền mặt (NĐ 181 Đ.26 k.2–3); tỷ lệ GTGT nhà thầu nước ngoài (TT 69 Đ.9) | 01/07/2025 | TC (MISA, KPMG) |
 | NĐ 174/2025/NĐ-CP (theo NQ 204/2025/QH15) | **Giảm thuế suất 10% → 8%** từ 01/07/2025 đến **hết 31/12/2026**, trừ Phụ lục I (viễn thông; tài chính, ngân hàng, chứng khoán, bảo hiểm; kinh doanh BĐS; sản phẩm kim loại; khai khoáng trừ than) và Phụ lục II (hàng chịu TTĐB, trừ xăng); phương pháp tỷ lệ % giảm 20% mức tỷ lệ (vd 1% → 0,8%) | đến 31/12/2026 | TC (MISA 06/2026). **Chưa thấy văn bản gia hạn sang 2027** tại 02/11/2026 – kiểm tra trước khi xuất hóa đơn từ 01/01/2027 |
 
