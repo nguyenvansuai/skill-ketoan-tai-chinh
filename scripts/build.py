@@ -34,10 +34,6 @@ SHARED_MAP = {
     "bao-cao-tai-chinh": CHE_DO,
     "thue-gtgt-dn": THUE,
     "thue-tndn": THUE,
-    "luong-bao-hiem": THUE,
-    "thue-nha-thau": THUE,
-    "lich-thue-dn": THUE,
-    "dong-tien-chu-dn": [],
 }
 GIOI_HAN_GPT = 8000  # ký tự tối đa ô Instructions của Custom GPT
 DANH_MUC = "ke-toan-tai-chinh"
@@ -134,20 +130,25 @@ def sinh_chatgpt():
 
 
 def sinh_marketplace():
+    """Mỗi skill là 1 plugin; dùng kiểu khai báo của anthropics/skills (source "./", strict false, skills: [...])
+    để Claude Code tìm đúng SKILL.md mà không cần plugin.json trong từng thư mục."""
     plugins = []
-    for sk in ds_skill():
+    ds = ds_skill()
+    for sk in ds:
         meta, _ = tach_frontmatter((sk / "SKILL.md").read_text(encoding="utf-8"))
-        plugins.append({"name": sk.name, "source": f"./skills/{sk.name}", "description": meta["description"], "category": DANH_MUC})
+        plugins.append({"name": sk.name, "source": "./", "strict": False, "skills": [f"./skills/{sk.name}"],
+                        "description": meta["description"], "category": DANH_MUC})
     plugins.append({
         "name": "tron-bo-skill-ke-toan",
         "source": "./",
-        "description": f"Cài cả bộ {len(plugins)} skill kế toán – tài chính cho DN nhỏ và vừa (chế độ kế toán TT133/TT58, định khoản, "
-                       "đọc hóa đơn XML, đối soát, khóa sổ, BCTC, GTGT, TNDN, lương – bảo hiểm, thuế nhà thầu, lịch thuế, dòng tiền) trong một lần.",
+        "strict": False,
+        "skills": [f"./skills/{sk.name}" for sk in ds],
+        "description": f"Cài cả bộ {len(ds)} skill kế toán – tài chính cho DN nhỏ và vừa: " + ", ".join(sk.name for sk in ds) + ".",
         "category": DANH_MUC,
     })
     data = {
         "name": "skill-ketoan-tai-chinh",
-        "description": f"Bộ {len(plugins) - 1} skill AI kế toán – tài chính cho doanh nghiệp nhỏ, vừa và siêu nhỏ Việt Nam 2026 "
+        "description": f"Bộ {len(ds)} skill AI kế toán – tài chính cho doanh nghiệp nhỏ, vừa và siêu nhỏ Việt Nam 2026 "
                        "(TT133/2016, TT58/2026, Luật TNDN 67/2025, NĐ 252/2026, NĐ 254/2026).",
         "owner": {"name": "nguyenvansuai", "url": "https://github.com/nguyenvansuai"},
         "plugins": plugins,

@@ -11,6 +11,7 @@ description: Tính và chuẩn bị số liệu khai thuế GTGT cho doanh nghi�
 
 - Phương pháp: **khấu trừ** (mặc định DN) hay **trực tiếp** (chỉ khi không đủ điều kiện khấu trừ – không phải quyền chọn). TNDN theo % doanh thu không làm mất quyền khấu trừ GTGT.
 - Kỳ khai: quý (doanh thu năm trước ≤50 tỷ, DN mới) / tháng (>50 tỷ) – [cần kiểm tra NĐ 252/2026]. Hạn: tháng → ngày 20 tháng sau; quý → ngày cuối tháng đầu quý sau; trùng ngày nghỉ lùi sang ngày làm việc tiếp theo.
+- Năm 2026, DN nhỏ, siêu nhỏ: kiểm tra **gia hạn nộp tiền** GTGT theo NĐ 245/2026 (`references/thue-dn-2026.md` mục 6a) – chỉ lùi hạn nộp tiền, không lùi hạn tờ khai; đề nghị gia hạn gửi chậm nhất 02/11/2026.
 - Số thuế còn được khấu trừ kỳ trước (chỉ tiêu chuyển sang trên tờ khai kỳ trước).
 
 ## 2. Tính
@@ -41,5 +42,5 @@ python3 scripts/tinh_gtgt.py --truc-tiep hang-hoa=2400000000 dich-vu=300000000 -
 1. Bảng tính: đầu ra, đầu vào được khấu trừ, còn được khấu trừ kỳ trước → **phải nộp** hoặc **chuyển kỳ sau**; "Đã kiểm tra phép tính".
 2. Danh sách hóa đơn bị loại khỏi khấu trừ và hóa đơn cần bổ sung chứng từ chuyển khoản.
 3. Bút toán: khấu trừ Nợ 33311 / Có 1331; nộp thuế Nợ 33311 / Có 112.
-4. Hạn khai, nộp của kỳ (gợi ý dùng skill `lich-thue-dn`).
+4. Hạn khai, nộp của kỳ (gợi ý dùng skill `lich-thue-dn` (sắp có)).
 5. Câu chốt: "Đối chiếu tờ khai trên eTax/HTKK và hỏi cơ quan thuế quản lý trước khi nộp."

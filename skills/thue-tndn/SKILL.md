@@ -48,5 +48,5 @@ python3 scripts/tinh_tndn.py tam-nop --quy 3 --thu-nhap-luy-ke 600000000 --doanh
 1. Bảng quyết toán (lợi nhuận → điều chỉnh → thu nhập tính thuế → thuế → đã tạm nộp → nộp thêm/thừa) hoặc số tạm nộp quý; "Đã kiểm tra phép tính".
 2. Bút toán: Nợ 821 / Có 3334 (ghi nhận, điều chỉnh); nộp: Nợ 3334 / Có 112.
 3. Bảng **Cần anh/chị kiểm tra**: cờ của script (miễn ≤1 tỷ, NQ 43, thiếu 80%), khoản điều chỉnh [cần kiểm tra], chứng từ còn thiếu.
-4. Hạn: tạm nộp quý; quyết toán + BCTC ngày cuối tháng thứ 3 sau năm (năm 2026 → 31/03/2027) – dùng skill `lich-thue-dn` để lập lịch.
+4. Hạn: tạm nộp quý; quyết toán + BCTC ngày cuối tháng thứ 3 sau năm (năm 2026 → 31/03/2027) – dùng skill `lich-thue-dn` (sắp có) để lập lịch.
 5. Câu chốt: "Đối chiếu văn bản hiện hành và hỏi cơ quan thuế quản lý trước khi kê khai."

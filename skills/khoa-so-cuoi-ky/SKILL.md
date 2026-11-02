@@ -13,7 +13,7 @@ Kỳ khóa sổ (tháng/quý/năm), chế độ kế toán (TT133 mặc định)
 
 ## 2. Checklist
 
-Trả về checklist theo `references/checklist-khoa-so.md` (mục A + B nếu cuối quý + C nếu cuối năm), giữ thứ tự **mức 1 → mức 4** vì có phụ thuộc. Đánh dấu việc nào skill khác làm được (`doc-hoa-don-xml`, `doi-soat`, `luong-bao-hiem`, `thue-gtgt-dn`, `thue-tndn`, `bao-cao-tai-chinh`).
+Trả về checklist theo `references/checklist-khoa-so.md` (mục A + B nếu cuối quý + C nếu cuối năm), giữ thứ tự **mức 1 → mức 4** vì có phụ thuộc. Đánh dấu việc nào skill khác làm được (`doc-hoa-don-xml`, `doi-soat`, `luong-bao-hiem` (sắp có), `thue-gtgt-dn`, `thue-tndn`, `bao-cao-tai-chinh`).
 
 ## 3. Khấu hao, phân bổ
 

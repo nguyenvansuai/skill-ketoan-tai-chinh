@@ -7,7 +7,7 @@
 **Mức 1 – không phụ thuộc, làm ngay T+1**
 - [ ] Nhập đủ chứng từ thu, chi, ngân hàng đến ngày cuối tháng.
 - [ ] Tải và nhập hóa đơn đầu vào, đầu ra của tháng (XML) → skill `doc-hoa-don-xml`.
-- [ ] Tính lương, bảo hiểm, thuế TNCN khấu trừ → skill `luong-bao-hiem`.
+- [ ] Tính lương, bảo hiểm, thuế TNCN khấu trừ → skill `luong-bao-hiem` (sắp có).
 - [ ] Khấu hao TSCĐ, phân bổ 242 → `scripts/khau_hao.py`.
 - [ ] Trích trước chi phí đã phát sinh chưa có hóa đơn (điện, nước, dịch vụ cuối tháng): Nợ 6421/6422 / Có 335 – có cơ sở ước tính, hoàn nhập khi có hóa đơn.
 
@@ -20,7 +20,7 @@
 
 **Mức 3 – sau mức 2**
 - [ ] Khấu trừ thuế GTGT: Nợ 33311 / Có 133 (số nhỏ hơn). Chuẩn bị số liệu tờ khai → skill `thue-gtgt-dn`.
-- [ ] Thuế nhà thầu phát sinh trong tháng đã khấu trừ, khai → skill `thue-nha-thau`.
+- [ ] Thuế nhà thầu phát sinh trong tháng đã khấu trừ, khai → skill `thue-nha-thau` (sắp có).
 - [ ] Lập bảng cân đối số phát sinh (trước kết chuyển): tổng Nợ = tổng Có; tài khoản tài sản không dư Có bất thường (111, 112, 156 âm).
 
 **Mức 4 – kết quả**
