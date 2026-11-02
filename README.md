@@ -1,6 +1,6 @@
 # Skill AI Kế toán – Tài chính cho doanh nghiệp nhỏ và vừa (Việt Nam 2026)
 
-Bộ **8 skill** giúp Claude (và ChatGPT) hỗ trợ **kế toán, chủ doanh nghiệp nhỏ, vừa và siêu nhỏ** làm sổ sách và thuế theo quy định năm 2026: chọn chế độ kế toán (**TT133/2016**, **TT58/2026**), định khoản, đọc hóa đơn điện tử XML, đối soát ngân hàng và công nợ, khóa sổ, lập BCTC, tính thuế GTGT và TNDN.
+Bộ **12 skill** giúp Claude (và ChatGPT) hỗ trợ **kế toán, chủ doanh nghiệp nhỏ, vừa và siêu nhỏ** làm sổ sách và thuế theo quy định năm 2026: chọn chế độ kế toán (**TT133/2016**, **TT58/2026**), định khoản, đọc hóa đơn điện tử XML, đối soát ngân hàng và công nợ, khóa sổ, lập BCTC, tính thuế GTGT, TNDN, thuế nhà thầu, lập bảng lương – bảo hiểm, lịch thuế, dự báo dòng tiền.
 
 Mọi skill theo cùng nguyên tắc: **không bịa, không đoán số** (chữ mờ đánh dấu `[?]`), **tính bằng code**, viện dẫn pháp luật kèm số hiệu văn bản và độ tin cậy, **không tự khai, nộp, ký, xuất hóa đơn thay**.
 
@@ -28,8 +28,10 @@ Trên điện thoại: bấm vào tên file → nút **Download** (biểu tượ
 | 06 | Báo cáo tài chính | `/bao-cao-tai-chinh` | Từ bảng cân đối phát sinh → B01a-DNN, B02-DNN, F01-DNN (Excel có công thức, dòng kiểm tra 200 = 500); dàn ý thuyết minh B09-DNN; chỉ số nhanh |
 | 07 | Thuế GTGT | `/thue-gtgt-dn` | Khấu trừ hoặc trực tiếp; loại hóa đơn từ 5 triệu trả tiền mặt; 8% đến 31/12/2026; kỳ khai tháng/quý; gia hạn NĐ 245/2026 |
 | 08 | Thuế TNDN | `/thue-tndn` | Thuế suất 15%/17%/20% theo doanh thu năm trước; rà miễn ≤1 tỷ, giảm 30% NQ 43/2026; điều chỉnh chi phí không được trừ; chuyển lỗ; tạm nộp quý, mức 80%; quyết toán |
-
-**Sắp có:** lương – bảo hiểm, thuế nhà thầu nước ngoài, lịch thuế DN (.ics), dòng tiền 13 tuần cho chủ DN.
+| 09 | Lương – bảo hiểm | `/luong-bao-hiem` | Bảng lương tháng: BHXH, BHYT, BHTN phần NLĐ và DN, trần 50,6 triệu, lương tối thiểu vùng, TNCN lũy tiến 5 bậc (giảm trừ 15,5/6,2 triệu), khấu trừ 10% HĐ dưới 3 tháng; bút toán 334/338/3335, Excel |
+| 10 | Thuế nhà thầu | `/thue-nha-thau` | Thuế nhà thầu nước ngoài GTGT + TNDN theo ngành; hợp đồng net quy đổi gross-up hoặc gross; ngoại tệ; bút toán 331/3338/1331; dịch vụ số, hiệp định thuế |
+| 11 | Lịch thuế DN | `/lich-thue-dn` | Hạn khai, nộp cả năm (tháng/quý, tạm nộp TNDN, quyết toán, BCTC), gia hạn NĐ 245/2026, tự lùi ngày nghỉ, báo hạn đã quá/sắp tới, file .ics cho Google Calendar, iPhone |
+| 12 | Dòng tiền chủ DN | `/dong-tien-chu-dn` | Dự báo dòng tiền 13 tuần, kịch bản khách trả trễ, cảnh báo âm quỹ; điểm hòa vốn; so sánh kế hoạch – thực tế, lọc chênh lệch trọng yếu |
 
 ## Cài đặt
 
@@ -43,7 +45,7 @@ Sau đó nói tự nhiên: "định khoản giúp tôi nghiệp vụ này", "đ�
 
 ### Claude Code – cài qua plugin marketplace
 
-Cài cả bộ 8 skill (một lệnh, Claude Code 2.1.275 trở lên):
+Cài cả bộ 12 skill (một lệnh, Claude Code 2.1.275 trở lên):
 
 ```
 /plugin install tron-bo-skill-ke-toan --marketplace nguyenvansuai/skill-ketoan-tai-chinh
@@ -60,6 +62,10 @@ Hoặc cài từng skill:
 /plugin install bao-cao-tai-chinh --marketplace nguyenvansuai/skill-ketoan-tai-chinh
 /plugin install thue-gtgt-dn --marketplace nguyenvansuai/skill-ketoan-tai-chinh
 /plugin install thue-tndn --marketplace nguyenvansuai/skill-ketoan-tai-chinh
+/plugin install luong-bao-hiem --marketplace nguyenvansuai/skill-ketoan-tai-chinh
+/plugin install thue-nha-thau --marketplace nguyenvansuai/skill-ketoan-tai-chinh
+/plugin install lich-thue-dn --marketplace nguyenvansuai/skill-ketoan-tai-chinh
+/plugin install dong-tien-chu-dn --marketplace nguyenvansuai/skill-ketoan-tai-chinh
 ```
 
 Claude Code bản cũ hơn: chạy `/plugin marketplace add nguyenvansuai/skill-ketoan-tai-chinh` một lần, rồi `/plugin install <tên-skill>@skill-ketoan-tai-chinh`. Cập nhật bản mới: `/plugin marketplace update skill-ketoan-tai-chinh`.
@@ -90,6 +96,8 @@ Bảng đầy đủ, hiệu lực và độ tin cậy (**NV** = đã đối chi�
 | Luật QLT 108/2025; NĐ 252/2026; NĐ 245/2026 | Thời hạn khai, tạm nộp TNDN, gia hạn nộp thuế 2026 |
 | NĐ 254/2026; TT 91/2026 | Hóa đơn điện tử, xử lý hóa đơn sai |
 | TT 45/2013, TT 48/2019 (QĐ 1760/QĐ-BTC) | Khấu hao, dự phòng – tiếp tục hiệu lực không quá 31/12/2026 |
+| Luật TNCN 109/2025; NĐ 253/2026; NĐ 161/2026; NĐ 293/2025; Luật BHXH 41/2024 | Biểu thuế 5 bậc, giảm trừ 15,5/6,2 triệu, khấu trừ 10%; lương cơ sở 2.530.000, lương tối thiểu vùng; bảo hiểm bắt buộc |
+| TT 69/2025; TT 20/2026; TT 89/2026; TT 95/2026 | Thuế nhà thầu nước ngoài, hiệp định thuế |
 
 ## Script đi kèm (Python 3)
 
@@ -104,6 +112,10 @@ Bảng đầy đủ, hiệu lực và độ tin cậy (**NV** = đã đối chi�
 | `skills/bao-cao-tai-chinh/scripts/lap_bctc.py` | B01a-DNN, B02-DNN, F01-DNN từ bảng cân đối phát sinh |
 | `skills/thue-gtgt-dn/scripts/tinh_gtgt.py` | GTGT khấu trừ / trực tiếp |
 | `skills/thue-tndn/scripts/tinh_tndn.py` | Quyết toán TNDN, tạm nộp quý |
+| `skills/luong-bao-hiem/scripts/tinh_luong.py` | Bảng lương, bảo hiểm, TNCN khấu trừ, bút toán |
+| `skills/thue-nha-thau/scripts/tinh_thue_nha_thau.py` | Thuế nhà thầu net/gross, quy đổi ngoại tệ |
+| `skills/lich-thue-dn/scripts/tao_lich_thue.py` | Lịch hạn nộp cả năm, file .ics, hạn đã quá/sắp tới |
+| `skills/dong-tien-chu-dn/scripts/dong_tien.py` | Dòng tiền 13 tuần, hòa vốn, kế hoạch – thực tế |
 
 Mọi script có `--self-test`. Xuất Excel cần `pip install openpyxl`; còn lại chỉ cần Python 3.
 

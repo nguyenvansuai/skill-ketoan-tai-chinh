@@ -97,7 +97,7 @@ Phát sinh khi DN Việt Nam trả tiền cho tổ chức, cá nhân nước ngo
 
 - GTGT nhà thầu = doanh thu tính thuế GTGT × tỷ lệ (TT 69/2025 Đ.9): hàng hóa 1%; dịch vụ, cho thuê máy móc thiết bị, bảo hiểm 5%; dịch vụ gắn hàng hóa 3%; khác 2%.
 - TNDN nhà thầu = doanh thu tính thuế TNDN × tỷ lệ (NĐ 320/2025 Đ.12): thương mại hàng hóa 1%; dịch vụ 5%; lãi tiền vay 5%; bản quyền 10%; cho thuê máy móc thiết bị 5%; xây lắp 2%; vận chuyển 2%…
-- Hợp đồng giá **chưa gồm thuế (net)**: phải quy đổi gross-up. Công thức quy đổi theo TT 20/2026 **[cần kiểm tra]**; cách phổ biến: doanh thu tính TNDN = giá net ÷ (1 − tỷ lệ TNDN), doanh thu tính GTGT = doanh thu tính TNDN ÷ (1 − tỷ lệ GTGT).
+- Hợp đồng giá **chưa gồm thuế (net)**: phải quy đổi gross-up. Công thức quy đổi theo TT 20/2026 **[cần kiểm tra]**; cách phổ biến: doanh thu tính TNDN = giá net ÷ (1 − tỷ lệ TNDN), doanh thu tính GTGT = doanh thu tính TNDN ÷ (1 − tỷ lệ GTGT). Script: skill `thue-nha-thau`.
 - Mua dịch vụ số qua nền tảng nước ngoài (quảng cáo Facebook, Google, TikTok, SaaS, cloud): nhà cung cấp đã **đăng ký, khai nộp thuế trực tiếp** qua Cổng thông tin cho nhà cung cấp nước ngoài thì bên mua thường không khấu trừ lại – **[cần kiểm tra]** quy định hiện hành và tình trạng đăng ký của từng nhà cung cấp; chưa rõ thì hỏi cơ quan thuế, lưu hóa đơn/chứng từ thanh toán.
 
 ## 6. Lịch khai, nộp (NĐ 252/2026 Đ.10, Đ.24; hạn trùng ngày nghỉ lùi sang ngày làm việc tiếp theo – Đ.3 k.7)
@@ -112,7 +112,7 @@ Phát sinh khi DN Việt Nam trả tiền cho tổ chức, cá nhân nước ngo
 | Thuế nhà thầu (từng lần) | Theo từng lần thanh toán – xem TT 89/2026 **[cần kiểm tra số ngày]** |
 | Lệ phí môn bài | **Không còn** từ 01/01/2026 (NQ 198/2025) – chỉ rà nợ tồn đọng trước 2026 |
 
-Hạn nộp tiền = hạn nộp hồ sơ khai.
+Hạn nộp tiền = hạn nộp hồ sơ khai. Lịch tự động, file .ics: skill `lich-thue-dn`.
 
 ## 6a. Gia hạn nộp thuế năm 2026 (NĐ 245/2026/NĐ-CP – TC)
 

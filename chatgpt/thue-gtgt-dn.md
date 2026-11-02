@@ -55,6 +55,6 @@ python3 tinh_gtgt.py --truc-tiep hang-hoa=2400000000 dich-vu=300000000 --giam-20
 1. Bảng tính: đầu ra, đầu vào được khấu trừ, còn được khấu trừ kỳ trước → **phải nộp** hoặc **chuyển kỳ sau**; "Đã kiểm tra phép tính".
 2. Danh sách hóa đơn bị loại khỏi khấu trừ và hóa đơn cần bổ sung chứng từ chuyển khoản.
 3. Bút toán: khấu trừ Nợ 33311 / Có 1331; nộp thuế Nợ 33311 / Có 112.
-4. Hạn khai, nộp của kỳ và hạn nộp tiền nếu được gia hạn (`file Knowledge thue-dn-2026.md` mục 6, 6a); hạn trùng thứ Bảy, Chủ nhật, ngày lễ lùi sang ngày làm việc tiếp theo.
+4. Hạn khai, nộp của kỳ và hạn nộp tiền nếu được gia hạn (`file Knowledge thue-dn-2026.md` mục 6, 6a); lịch cả năm và file .ics: skill `lich-thue-dn`; hạn trùng thứ Bảy, Chủ nhật, ngày lễ lùi sang ngày làm việc tiếp theo.
 5. Câu chốt: "Đối chiếu tờ khai trên eTax/HTKK và hỏi cơ quan thuế quản lý trước khi nộp."
 ````

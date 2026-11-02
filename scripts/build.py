@@ -34,6 +34,10 @@ SHARED_MAP = {
     "bao-cao-tai-chinh": CHE_DO,
     "thue-gtgt-dn": THUE,
     "thue-tndn": THUE,
+    "luong-bao-hiem": THUE,
+    "thue-nha-thau": THUE,
+    "lich-thue-dn": THUE,
+    "dong-tien-chu-dn": THUE,
 }
 GIOI_HAN_GPT = 8000  # ký tự tối đa ô Instructions của Custom GPT
 DANH_MUC = "ke-toan-tai-chinh"
