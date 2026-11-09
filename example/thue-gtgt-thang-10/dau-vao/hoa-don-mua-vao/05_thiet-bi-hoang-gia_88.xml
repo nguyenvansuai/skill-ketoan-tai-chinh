@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HDon><DLHDon Id="data"><TTChung><PBan>2.1.0</PBan><THDon>HÓA ĐƠN GIÁ TRỊ GIA TĂNG</THDon><KHMSHDon>1</KHMSHDon><KHHDon>C26THG</KHHDon><SHDon>88</SHDon><NLap>2026-10-14</NLap><DVTTe>VND</DVTTe><TGia>1</TGia><HTTToan>TM/CK</HTTToan></TTChung>
+<NDHDon><NBan><Ten>CÔNG TY TNHH THIẾT BỊ VĂN PHÒNG HOÀNG GIA</Ten><MST>0304445556</MST><DChi>Phường Tân Định, TP. Hồ Chí Minh</DChi></NBan><NMua><Ten>CÔNG TY TNHH THƯƠNG MẠI AN PHÁT</Ten><MST>0319876534</MST><DChi>Số 12 Đường số 7, Phường An Lạc, TP. Hồ Chí Minh</DChi></NMua>
+<DSHHDVu><HHDVu><TChat>1</TChat><STT>1</STT><THHDVu>Máy in laser đa năng</THHDVu><DVTinh>Cái</DVTinh><SLuong>2</SLuong><DGia>4900000</DGia><ThTien>9800000</ThTien><TSuat>8%</TSuat></HHDVu></DSHHDVu>
+<TToan><THTTLTSuat><LTSuat><TSuat>8%</TSuat><ThTien>9800000</ThTien><TThue>784000</TThue></LTSuat></THTTLTSuat><TgTCThue>9800000</TgTCThue><TgTThue>784000</TgTThue><TTCKTMai>0</TTCKTMai><TgTTTBSo>10584000</TgTTTBSo></TToan></NDHDon></DLHDon>
+<MCCQT>00A1B2C3D4E5F655560088</MCCQT><DSCKS><NBan><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"/></NBan></DSCKS></HDon>

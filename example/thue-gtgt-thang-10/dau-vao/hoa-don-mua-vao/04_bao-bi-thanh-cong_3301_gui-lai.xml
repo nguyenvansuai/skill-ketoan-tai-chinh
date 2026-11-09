@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HDon><DLHDon Id="data"><TTChung><PBan>2.1.0</PBan><THDon>HÓA ĐƠN GIÁ TRỊ GIA TĂNG</THDon><KHMSHDon>1</KHMSHDon><KHHDon>C26TTC</KHHDon><SHDon>3301</SHDon><NLap>2026-10-09</NLap><DVTTe>VND</DVTTe><TGia>1</TGia><HTTToan>TM/CK</HTTToan></TTChung>
+<NDHDon><NBan><Ten>CÔNG TY TNHH BAO BÌ THÀNH CÔNG</Ten><MST>0303334445</MST><DChi>Phường Bình Hưng Hòa, TP. Hồ Chí Minh</DChi></NBan><NMua><Ten>CÔNG TY TNHH THƯƠNG MẠI AN PHÁT</Ten><MST>0319876543</MST><DChi>Số 12 Đường số 7, Phường An Lạc, TP. Hồ Chí Minh</DChi></NMua>
+<DSHHDVu><HHDVu><TChat>1</TChat><STT>1</STT><THHDVu>Thùng carton 5 lớp 60x40x40</THHDVu><DVTinh>Cái</DVTinh><SLuong>5000</SLuong><DGia>5700</DGia><ThTien>28500000</ThTien><TSuat>8%</TSuat></HHDVu></DSHHDVu>
+<TToan><THTTLTSuat><LTSuat><TSuat>8%</TSuat><ThTien>28500000</ThTien><TThue>2280000</TThue></LTSuat></THTTLTSuat><TgTCThue>28500000</TgTCThue><TgTThue>2280000</TgTThue><TTCKTMai>0</TTCKTMai><TgTTTBSo>30780000</TgTTTBSo></TToan></NDHDon></DLHDon>
+<MCCQT>00A1B2C3D4E5F644453301</MCCQT><DSCKS><NBan><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"/></NBan></DSCKS></HDon>

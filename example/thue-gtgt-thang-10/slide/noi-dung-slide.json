@@ -1,0 +1,68 @@
+{
+  "mau": "#1F6F5C",
+  "plugin_ten": "Kế toán – Tài chính",
+  "tieu_de": "Lên số thuế GTGT tháng 10 trong 15 phút",
+  "tinh_huong": "Kế toán tổng hợp công ty thương mại 25 người · 12/11 · nhà cung cấp gửi hóa đơn XML về email · hạn nộp tờ khai 20/11",
+  "thu_cong": {
+    "buoc": [
+      "Mở từng email, tải từng file XML/PDF hóa đơn",
+      "Gõ số hóa đơn, MST, tiền hàng, tiền thuế vào Excel",
+      "Dò sổ quỹ, sao kê xem hóa đơn nào trả tiền mặt",
+      "Tra cứu từng hóa đơn, tự nhớ điều kiện khấu trừ",
+      "Cộng đầu vào – đầu ra, ra số phải nộp"
+    ],
+    "thoi_gian": "Mất khoảng 1 ngày cho 60 hóa đơn",
+    "rui_ro": [
+      "Sót hóa đơn trùng, hóa đơn sai MST người mua",
+      "Khấu trừ cả hóa đơn ≥ 5 triệu trả tiền mặt",
+      "Ví dụ này: khai thiếu 4.024.000đ → truy thu + phạt 20%"
+    ]
+  },
+  "plugin": {
+    "buoc": [
+      "Đính kèm thư mục hóa đơn XML + sổ quỹ, gõ 1 câu yêu cầu",
+      "doc-hoa-don-xml đọc hàng loạt, tự kiểm phép tính, MST, chữ ký, mã CQT, hóa đơn trùng",
+      "thue-gtgt-dn loại hóa đơn không đủ điều kiện, tính số phải nộp",
+      "Xuất bảng kê Excel + thư nháp gửi nhà cung cấp",
+      "Kế toán chỉ rà kết quả, tra cứu, duyệt"
+    ],
+    "thoi_gian": "Khoảng 15 phút, kể cả rà soát",
+    "loi_ich": [
+      "Con số tính bằng công cụ, có căn cứ từng hóa đơn bị loại",
+      "Không phải nhớ điều kiện khấu trừ, ngưỡng 5 triệu",
+      "Có sẵn file Excel và thư nháp, không gõ lại"
+    ]
+  },
+  "demo": {
+    "ten": "8 hóa đơn mua vào tháng 10",
+    "mo_ta": "Công ty TNHH Thương mại An Phát (giả lập) · dữ liệu đặt sẵn trong thư mục dau-vao/, không lấy từ email",
+    "dau_vao": [
+      "hoa-don-mua-vao/: 8 file XML (cài sẵn 3 lỗi)",
+      "ban-ra-thang-10.xlsx",
+      "so-quy-sao-ke-thang-10.xlsx",
+      "thong-tin-cong-ty.md (MST, thuế kỳ trước còn 1.850.000đ)"
+    ],
+    "prompt": [
+      "Tôi là kế toán Công ty TNHH Thương mại An Phát.",
+      "Đính kèm 8 hóa đơn XML mua vào tháng 10/2026, bảng bán ra và sổ quỹ – sao kê. Hãy:",
+      "1. Lập bảng kê hóa đơn mua vào.",
+      "2. Chỉ ra hóa đơn có vấn đề, hóa đơn nào không được khấu trừ, vì sao.",
+      "3. Tính thuế GTGT phải nộp tháng 10.",
+      "4. Cho biết hạn nộp.",
+      "5. Soạn thư đề nghị nhà cung cấp điều chỉnh hóa đơn sai.",
+      "Xuất bảng kê ra Excel."
+    ],
+    "ket_qua": {
+      "nhan_so": "Thuế GTGT phải nộp tháng 10",
+      "so": "22.824.000đ",
+      "y": [
+        "HĐ 3301 trùng (gửi 2 lần)",
+        "HĐ 568 – 12,96 triệu trả tiền mặt: loại 960.000đ",
+        "HĐ 88 sai MST người mua: chờ hóa đơn điều chỉnh",
+        "Hạn nộp: 20/11/2026"
+      ]
+    },
+    "connector": "Gmail tự tìm thư có file .xml trong tháng → Drive lưu bảng kê vào thư mục kỳ → Calendar nhắc hạn 20/11 → Gmail tạo nháp thư gửi nhà cung cấp.",
+    "nguoi_lam": "tra cứu hóa đơn trên hoadondientu.gdt.gov.vn, đối chiếu tờ khai eTax/HTKK, kế toán trưởng duyệt, tự bấm nộp và tự gửi thư."
+  }
+}

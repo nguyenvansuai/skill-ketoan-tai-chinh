@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HDon><DLHDon Id="data"><TTChung><PBan>2.1.0</PBan><THDon>HÓA ĐƠN GIÁ TRỊ GIA TĂNG</THDon><KHMSHDon>1</KHMSHDon><KHHDon>C26TGS</KHHDon><SHDon>1201</SHDon><NLap>2026-10-03</NLap><DVTTe>VND</DVTTe><TGia>1</TGia><HTTToan>TM/CK</HTTToan></TTChung>
+<NDHDon><NBan><Ten>CÔNG TY TNHH GIẤY SÀI GÒN</Ten><MST>0301112223</MST><DChi>KCN Tân Tạo, TP. Hồ Chí Minh</DChi></NBan><NMua><Ten>CÔNG TY TNHH THƯƠNG MẠI AN PHÁT</Ten><MST>0319876543</MST><DChi>Số 12 Đường số 7, Phường An Lạc, TP. Hồ Chí Minh</DChi></NMua>
+<DSHHDVu><HHDVu><TChat>1</TChat><STT>1</STT><THHDVu>Giấy in A4 70gsm</THHDVu><DVTinh>Thùng</DVTinh><SLuong>300</SLuong><DGia>150000</DGia><ThTien>45000000</ThTien><TSuat>8%</TSuat></HHDVu></DSHHDVu>
+<TToan><THTTLTSuat><LTSuat><TSuat>8%</TSuat><ThTien>45000000</ThTien><TThue>3600000</TThue></LTSuat></THTTLTSuat><TgTCThue>45000000</TgTCThue><TgTThue>3600000</TgTThue><TTCKTMai>0</TTCKTMai><TgTTTBSo>48600000</TgTTTBSo></TToan></NDHDon></DLHDon>
+<MCCQT>00A1B2C3D4E5F622231201</MCCQT><DSCKS><NBan><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"/></NBan></DSCKS></HDon>

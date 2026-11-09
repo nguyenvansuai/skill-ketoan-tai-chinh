@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HDon><DLHDon Id="data"><TTChung><PBan>2.1.0</PBan><THDon>HÓA ĐƠN GIÁ TRỊ GIA TĂNG</THDon><KHMSHDon>1</KHMSHDon><KHHDon>C26TNP</KHHDon><SHDon>702</SHDon><NLap>2026-10-20</NLap><DVTTe>VND</DVTTe><TGia>1</TGia><HTTToan>TM/CK</HTTToan></TTChung>
+<NDHDon><NBan><Ten>CÔNG TY TNHH ĐIỆN MÁY NAM PHONG</Ten><MST>0306667778</MST><DChi>Phường Phú Nhuận, TP. Hồ Chí Minh</DChi></NBan><NMua><Ten>CÔNG TY TNHH THƯƠNG MẠI AN PHÁT</Ten><MST>0319876543</MST><DChi>Số 12 Đường số 7, Phường An Lạc, TP. Hồ Chí Minh</DChi></NMua>
+<DSHHDVu><HHDVu><TChat>1</TChat><STT>1</STT><THHDVu>Quạt đứng công nghiệp</THHDVu><DVTinh>Cái</DVTinh><SLuong>4</SLuong><DGia>800000</DGia><ThTien>3200000</ThTien><TSuat>8%</TSuat></HHDVu></DSHHDVu>
+<TToan><THTTLTSuat><LTSuat><TSuat>8%</TSuat><ThTien>3200000</ThTien><TThue>256000</TThue></LTSuat></THTTLTSuat><TgTCThue>3200000</TgTCThue><TgTThue>256000</TgTThue><TTCKTMai>0</TTCKTMai><TgTTTBSo>3456000</TgTTTBSo></TToan></NDHDon></DLHDon>
+<MCCQT>00A1B2C3D4E5F677780702</MCCQT><DSCKS><NBan><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"/></NBan></DSCKS></HDon>
