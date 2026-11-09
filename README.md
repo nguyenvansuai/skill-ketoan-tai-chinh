@@ -77,8 +77,27 @@ git clone https://github.com/nguyenvansuai/skill-ketoan-tai-chinh.git
 mkdir -p ~/.claude/skills && cp -r skill-ketoan-tai-chinh/skills/* ~/.claude/skills/
 ```
 
-### ChatGPT
+### ChatGPT / Codex – cả bộ plugin (OpenAI)
 
+Gói plugin cho ChatGPT và Codex nằm ở [`openai/ketoan-taichinh-vn/`](openai/ketoan-taichinh-vn/), theo cấu trúc portable của OpenAI (`plugin.json`, `skills/`), gồm **12 skill**.
+
+**ChatGPT desktop / Codex** – cài cá nhân, không cần OpenAI duyệt:
+
+```bash
+codex plugin marketplace add nguyenvansuai/skill-ketoan-tai-chinh
+```
+
+```bash
+codex plugin add ketoan-taichinh-vn@skill-ketoan-tai-chinh
+```
+
+Hoặc trong ứng dụng ChatGPT desktop: **Plugins** → chọn nguồn **Kế toán – Tài chính VN** → **Install**. Khi dùng: mở chat chế độ **Work**, gõ `@` và chọn plugin.
+
+**ChatGPT web / chia sẻ rộng**: muốn plugin xuất hiện trong thư mục plugin chung của ChatGPT phải gửi OpenAI duyệt qua [cổng nộp plugin](https://platform.openai.com/plugins) (cần xác minh danh tính). File nén sẵn để nộp: [`dist/ketoan-taichinh-vn-chatgpt.zip`](dist/). Quản trị viên workspace ChatGPT có thể **Publish** plugin cá nhân cho cả workspace.
+
+Sau khi sửa skill, sinh lại gói: `python3 scripts/build_openai.py`.
+
+### ChatGPT – từng skill (Project / Custom GPT)
 Mỗi skill có file hướng dẫn trong [`chatgpt/`](chatgpt): tạo **Project** (hoặc Custom GPT), dán phần **Instructions**, tải các file `references/` lên; bật Code Interpreter để chạy script.
 
 ## Văn bản pháp luật dùng trong bộ skill

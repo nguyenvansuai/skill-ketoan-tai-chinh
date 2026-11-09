@@ -1,0 +1,20 @@
+{
+  "name": "skill-ketoan-tai-chinh",
+  "interface": {
+    "displayName": "Kế toán – Tài chính VN"
+  },
+  "plugins": [
+    {
+      "name": "ketoan-taichinh-vn",
+      "source": {
+        "source": "local",
+        "path": "./openai/ketoan-taichinh-vn"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

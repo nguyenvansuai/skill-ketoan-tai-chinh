@@ -1,0 +1,42 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "ketoan-taichinh-vn",
+  "version": "1.0.0",
+  "description": "12 skill kế toán, thuế, BCTC cho doanh nghiệp nhỏ và vừa Việt Nam 2026.",
+  "author": {
+    "name": "nguyenvansuai",
+    "url": "https://github.com/nguyenvansuai"
+  },
+  "homepage": "https://github.com/nguyenvansuai/skill-ketoan-tai-chinh",
+  "repository": "https://github.com/nguyenvansuai/skill-ketoan-tai-chinh",
+  "license": "MIT",
+  "keywords": [
+    "ke-toan",
+    "thue",
+    "viet-nam"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Kế toán – Tài chính VN",
+        "shortDescription": "12 skill kế toán, thuế, BCTC cho doanh nghiệp nhỏ và vừa Việt Nam 2026.",
+        "longDescription": "Bộ 12 skill cho kế toán và chủ doanh nghiệp nhỏ, vừa, siêu nhỏ Việt Nam năm 2026: chọn chế độ kế toán (TT133, TT58), định khoản, đọc hóa đơn điện tử XML, đối soát ngân hàng và công nợ, khóa sổ, lập báo cáo tài chính, thuế GTGT, TNDN, thuế nhà thầu, bảng lương – bảo hiểm, lịch thuế, dự báo dòng tiền. Tính toán bằng script, không bịa số.",
+        "developerName": "nguyenvansuai",
+        "category": "Productivity",
+        "capabilities": [
+          "Read",
+          "Write"
+        ],
+        "websiteURL": "https://github.com/nguyenvansuai/skill-ketoan-tai-chinh",
+        "defaultPrompt": [
+          "Định khoản nghiệp vụ mua hàng hóa nhập kho chưa thanh toán theo TT133.",
+          "Đọc thư mục hóa đơn XML này và lập bảng kê mua vào theo thuế suất.",
+          "Lập lịch hạn nộp thuế cả năm 2027 cho công ty khai GTGT theo quý."
+        ],
+        "brandColor": "#166534",
+        "composerIcon": "./assets/icon.png",
+        "logo": "./assets/logo.png"
+      }
+    }
+  }
+}
