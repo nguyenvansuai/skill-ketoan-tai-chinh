@@ -37,3 +37,14 @@ Lập bút toán kết chuyển theo mục 7 của `but-toan-mau` (skill `dinh-k
 1. Checklist có trạng thái (✅ xong / ⬜ chưa / ⚠️ cần xử lý) + bút toán khấu hao, phân bổ, kết chuyển; "Đã kiểm tra phép tính".
 2. Bảng **Cần anh/chị kiểm tra**: tài khoản dư bất thường (mục D checklist), khoản trích trước thiếu cơ sở, tài sản khấu hao ngoài khung.
 3. Bước tiếp: `bao-cao-tai-chinh` (cuối năm) hoặc `thue-gtgt-dn` (cuối tháng/quý).
+
+<!-- KET-NOI:BAT-DAU (sinh tự động từ scripts/ket_noi.json – sửa ở đó rồi chạy build) -->
+## Kết nối ứng dụng
+
+Connector dùng cho skill này: **Google Calendar** · **Google Drive** · **Gmail** · **Microsoft 365 (Outlook, OneDrive/SharePoint, Teams)**. Đọc quy tắc trong `references/ket-noi.md` trước khi dùng.
+
+1. Tạo lịch các bước khóa sổ cuối tháng/quý/năm cho từng người (sau khi xác nhận), đúng thứ tự trong checklist.
+2. Lưu checklist, bảng khấu hao, phân bổ vào Drive; tạo nháp email nhắc các bộ phận nộp chứng từ trước ngày khóa sổ.
+
+**Khi chưa kết nối:** làm đủ phần soạn thảo, tính toán; đưa nội dung sẵn để người dùng tự dán vào email, lịch, thư mục; nhắc **một lần** cách bật connector, không dừng việc chỉ vì chưa kết nối.
+<!-- KET-NOI:KET-THUC -->

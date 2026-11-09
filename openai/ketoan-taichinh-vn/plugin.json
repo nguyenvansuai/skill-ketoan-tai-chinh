@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "ketoan-taichinh-vn",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "12 skill kế toán, thuế, BCTC cho doanh nghiệp nhỏ và vừa Việt Nam 2026.",
   "author": {
     "name": "nguyenvansuai",
@@ -36,7 +36,8 @@
         "brandColor": "#166534",
         "composerIcon": "./assets/icon.png",
         "logo": "./assets/logo.png"
-      }
+      },
+      "apps": "./.app.json"
     }
   }
 }

@@ -34,3 +34,15 @@ Kết quả: bảng kê theo chiều mua vào / bán ra, tổng theo thuế su�
 2. Bảng **Cần anh/chị kiểm tra**: từng hóa đơn có cảnh báo, hóa đơn cần chứng từ chuyển khoản, hóa đơn trùng.
 3. Bước tiếp: dùng skill `dinh-khoan` để hạch toán chi tiết, `thue-gtgt-dn` để lập số liệu tờ khai.
 4. Câu chốt: "Tra cứu hóa đơn trên hoadondientu.gdt.gov.vn và đối chiếu quy định hiện hành trước khi kê khai."
+
+<!-- KET-NOI:BAT-DAU (sinh tự động từ scripts/ket_noi.json – sửa ở đó rồi chạy build) -->
+## Kết nối ứng dụng
+
+Connector dùng cho skill này: **Gmail** · **Google Drive** · **Microsoft 365 (Outlook, OneDrive/SharePoint, Teams)**. Đọc quy tắc trong `references/ket-noi.md` trước khi dùng.
+
+1. Tìm thư nhà cung cấp gửi hóa đơn trong kỳ: `has:attachment filename:xml after:2026/10/01 before:2026/11/01` (thêm `subject:hóa đơn` nếu cần); lấy file XML đính kèm để đọc hàng loạt.
+2. Hoặc đọc cả thư mục hóa đơn XML theo tháng trên Drive.
+3. Lưu bảng kê mua vào/bán ra (Excel/Sheets) vào thư mục kỳ kế toán; tạo nháp email đề nghị nhà cung cấp xuất lại hóa đơn sai thông tin.
+
+**Khi chưa kết nối:** làm đủ phần soạn thảo, tính toán; đưa nội dung sẵn để người dùng tự dán vào email, lịch, thư mục; nhắc **một lần** cách bật connector, không dừng việc chỉ vì chưa kết nối.
+<!-- KET-NOI:KET-THUC -->

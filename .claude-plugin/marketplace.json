@@ -8,142 +8,263 @@
   "plugins": [
     {
       "name": "bao-cao-tai-chinh",
-      "source": "./",
-      "strict": false,
-      "skills": [
-        "./skills/bao-cao-tai-chinh"
-      ],
+      "source": "./skills/bao-cao-tai-chinh",
       "description": "Lập nháp báo cáo tài chính năm cho doanh nghiệp nhỏ và vừa theo Thông tư 133/2016 từ bảng cân đối số phát sinh — Báo cáo tình hình tài chính B01a-DNN (cuối năm, đầu năm), Báo cáo kết quả kinh doanh B02-DNN, Bảng cân đối tài khoản F01-DNN, xuất Excel có công thức và dòng kiểm tra tài sản = nguồn vốn; kiểm tra bảng cân đối có cân, tài khoản tài sản âm, công nợ lưỡng tính không bù trừ; hướng dẫn thuyết minh B09-DNN, hạn nộp 90 ngày; phân tích nhanh chỉ số. Dùng khi người dùng nói \"lập báo cáo tài chính\", \"BCTC cuối năm\", \"bảng cân đối kế toán\", \"báo cáo kết quả kinh doanh\", \"B01a-DNN\", \"B02-DNN\", \"F01-DNN\", \"từ bảng cân đối phát sinh ra BCTC\".",
-      "category": "ke-toan-tai-chinh"
+      "category": "ke-toan-tai-chinh",
+      "mcpServers": {
+        "google-drive": {
+          "type": "http",
+          "url": "https://drivemcp.googleapis.com/mcp/v1"
+        },
+        "gmail": {
+          "type": "http",
+          "url": "https://gmailmcp.googleapis.com/mcp/v1"
+        },
+        "microsoft-365": {
+          "type": "http",
+          "url": "https://microsoft365.mcp.claude.com/mcp"
+        }
+      }
     },
     {
       "name": "che-do-ke-toan",
-      "source": "./",
-      "strict": false,
-      "skills": [
-        "./skills/che-do-ke-toan"
-      ],
+      "source": "./skills/che-do-ke-toan",
       "description": "Xác định doanh nghiệp siêu nhỏ, nhỏ hay vừa (NĐ 80/2021) và chọn chế độ kế toán phù hợp năm 2026 — TT133/2016 cho DNNVV, TT58/2026 cho DN siêu nhỏ (4 nhóm sổ theo phương pháp nộp thuế, chỉ áp dụng năm tài chính bắt đầu từ/sau 01/07/2026), hay TT99/2025; tra hệ thống tài khoản TT133, mẫu sổ, mẫu BCTC, có cần kế toán trưởng không, ai được làm kế toán, chuyển đổi chế độ khi nào. Dùng khi người dùng hỏi \"công ty tôi áp dụng thông tư nào\", \"TT133 hay TT58\", \"DN siêu nhỏ là gì\", \"hệ thống tài khoản 133\", \"tài khoản 642 là gì\", \"có cần kế toán trưởng không\", \"vợ giám đốc làm kế toán được không\", \"chuyển từ 133 sang 99\".",
-      "category": "ke-toan-tai-chinh"
+      "category": "ke-toan-tai-chinh",
+      "mcpServers": {
+        "google-drive": {
+          "type": "http",
+          "url": "https://drivemcp.googleapis.com/mcp/v1"
+        },
+        "microsoft-365": {
+          "type": "http",
+          "url": "https://microsoft365.mcp.claude.com/mcp"
+        }
+      }
     },
     {
       "name": "dinh-khoan",
-      "source": "./",
-      "strict": false,
-      "skills": [
-        "./skills/dinh-khoan"
-      ],
+      "source": "./skills/dinh-khoan",
       "description": "Định khoản, hạch toán nghiệp vụ kế toán cho doanh nghiệp nhỏ và vừa theo hệ thống tài khoản Thông tư 133/2016 — từ mô tả nghiệp vụ, hóa đơn, phiếu thu chi, sao kê ra bút toán Nợ/Có (mua hàng, bán hàng, giảm trừ doanh thu ghi Nợ 511, lương và bảo hiểm, khấu hao, phân bổ 242, vay, góp vốn, thuế GTGT, TNDN, thuế nhà thầu, kết chuyển 911); kiểm tra file bút toán có dùng sai tài khoản TT200 (521, 641), chưa chi tiết 6421/6422, chi tiền mặt từ 5 triệu mất khấu trừ; xuất Sổ Nhật ký chung Excel. Dùng khi người dùng nói \"định khoản\", \"hạch toán\", \"bút toán\", \"nghiệp vụ này ghi nợ có gì\", \"hạch toán theo 133\", \"kiểm tra bút toán\", \"lên sổ nhật ký chung\".",
-      "category": "ke-toan-tai-chinh"
+      "category": "ke-toan-tai-chinh",
+      "mcpServers": {
+        "google-drive": {
+          "type": "http",
+          "url": "https://drivemcp.googleapis.com/mcp/v1"
+        },
+        "gmail": {
+          "type": "http",
+          "url": "https://gmailmcp.googleapis.com/mcp/v1"
+        },
+        "microsoft-365": {
+          "type": "http",
+          "url": "https://microsoft365.mcp.claude.com/mcp"
+        }
+      }
     },
     {
       "name": "doc-hoa-don-xml",
-      "source": "./",
-      "strict": false,
-      "skills": [
-        "./skills/doc-hoa-don-xml"
-      ],
+      "source": "./skills/doc-hoa-don-xml",
       "description": "Đọc hàng loạt file XML hóa đơn điện tử Việt Nam (Viettel, VNPT, MISA meInvoice, BKAV, EasyInvoice… theo định dạng của Tổng cục Thuế) thành bảng kê hóa đơn mua vào, bán ra kèm tổng theo thuế suất; kiểm tra cộng dòng, tổng tiền, thuế suất 8% sau 31/12/2026, thiếu mã cơ quan thuế, thiếu chữ ký số, MST sai, hóa đơn trùng, hóa đơn cùng người bán cùng ngày từ 5 triệu phải chuyển khoản; gợi ý bút toán TT133 và xuất Excel. Dùng khi người dùng gửi file .xml hóa đơn, thư mục hóa đơn, hoặc nói \"đọc hóa đơn xml\", \"lập bảng kê mua vào bán ra\", \"tổng hợp hóa đơn đầu vào\", \"kiểm tra hóa đơn trước khi kê khai\", \"nhập hóa đơn vào sổ\".",
-      "category": "ke-toan-tai-chinh"
+      "category": "ke-toan-tai-chinh",
+      "mcpServers": {
+        "gmail": {
+          "type": "http",
+          "url": "https://gmailmcp.googleapis.com/mcp/v1"
+        },
+        "google-drive": {
+          "type": "http",
+          "url": "https://drivemcp.googleapis.com/mcp/v1"
+        },
+        "microsoft-365": {
+          "type": "http",
+          "url": "https://microsoft365.mcp.claude.com/mcp"
+        }
+      }
     },
     {
       "name": "doi-soat",
-      "source": "./",
-      "strict": false,
-      "skills": [
-        "./skills/doi-soat"
-      ],
+      "source": "./skills/doi-soat",
       "description": "Đối soát cuối tháng cho doanh nghiệp nhỏ và vừa — đối chiếu sổ tiền gửi ngân hàng TK 112 với sao kê (ghép cặp tự động theo số tiền và ngày, tìm phí ngân hàng, lãi, tiền khách chuyển chưa ghi sổ, ủy nhiệm chi chưa trừ, lập bảng điều chỉnh số dư), đối chiếu công nợ phải thu 131 và phải trả 331 (tuổi nợ, nợ quá hạn, dự phòng phải thu khó đòi tham khảo), soạn biên bản đối chiếu công nợ, kiểm kê quỹ tiền mặt. Dùng khi người dùng nói \"đối chiếu ngân hàng\", \"đối soát sao kê\", \"sổ 112 lệch sao kê\", \"bank reconciliation\", \"tuổi nợ\", \"công nợ quá hạn\", \"đối chiếu công nợ\", \"biên bản xác nhận công nợ\", \"trích dự phòng nợ khó đòi\".",
-      "category": "ke-toan-tai-chinh"
+      "category": "ke-toan-tai-chinh",
+      "mcpServers": {
+        "gmail": {
+          "type": "http",
+          "url": "https://gmailmcp.googleapis.com/mcp/v1"
+        },
+        "google-drive": {
+          "type": "http",
+          "url": "https://drivemcp.googleapis.com/mcp/v1"
+        },
+        "microsoft-365": {
+          "type": "http",
+          "url": "https://microsoft365.mcp.claude.com/mcp"
+        }
+      }
     },
     {
       "name": "dong-tien-chu-dn",
-      "source": "./",
-      "strict": false,
-      "skills": [
-        "./skills/dong-tien-chu-dn"
-      ],
+      "source": "./skills/dong-tien-chu-dn",
       "description": "Công cụ tài chính quản trị cho chủ doanh nghiệp nhỏ và vừa — dự báo dòng tiền 13 tuần (số dư đầu, các khoản thu theo xác suất, chi lặp lại hằng tuần/tháng, hạn nộp thuế, lương), cảnh báo tuần âm quỹ hoặc dưới mức tối thiểu, kịch bản khách trả trễ; điểm hòa vốn (sản lượng, doanh thu, biên an toàn); so sánh kế hoạch với thực tế, lọc chênh lệch trọng yếu cần giải thích, tách giá – lượng. Dùng khi người dùng hỏi \"dự báo dòng tiền\", \"có đủ tiền trả lương không\", \"tháng sau có bị thiếu tiền không\", \"cash flow 13 tuần\", \"bán bao nhiêu thì hòa vốn\", \"điểm hòa vốn\", \"so sánh kế hoạch thực tế\", \"vì sao lợi nhuận tháng này giảm\".",
-      "category": "ke-toan-tai-chinh"
+      "category": "ke-toan-tai-chinh",
+      "mcpServers": {
+        "google-drive": {
+          "type": "http",
+          "url": "https://drivemcp.googleapis.com/mcp/v1"
+        },
+        "gmail": {
+          "type": "http",
+          "url": "https://gmailmcp.googleapis.com/mcp/v1"
+        },
+        "google-calendar": {
+          "type": "http",
+          "url": "https://calendarmcp.googleapis.com/mcp/v1"
+        },
+        "microsoft-365": {
+          "type": "http",
+          "url": "https://microsoft365.mcp.claude.com/mcp"
+        }
+      }
     },
     {
       "name": "khoa-so-cuoi-ky",
-      "source": "./",
-      "strict": false,
-      "skills": [
-        "./skills/khoa-so-cuoi-ky"
-      ],
+      "source": "./skills/khoa-so-cuoi-ky",
       "description": "Lập kế hoạch và thực hiện khóa sổ kế toán cuối tháng, cuối quý, cuối năm cho doanh nghiệp nhỏ và vừa theo TT133 — checklist có thứ tự công việc, tính khấu hao TSCĐ theo ngày (đường thẳng) và phân bổ chi phí trả trước 242 ra bút toán, trích trước 335, khấu trừ thuế GTGT, kết chuyển 911, kiểm tra tài khoản số dư âm, việc phải làm trước quyết toán năm. Dùng khi người dùng nói \"khóa sổ\", \"chốt sổ cuối tháng\", \"cuối năm cần làm gì\", \"tính khấu hao\", \"bảng khấu hao TSCĐ\", \"phân bổ chi phí trả trước\", \"phân bổ công cụ dụng cụ\", \"kết chuyển lãi lỗ\", \"month-end close\".",
-      "category": "ke-toan-tai-chinh"
+      "category": "ke-toan-tai-chinh",
+      "mcpServers": {
+        "google-calendar": {
+          "type": "http",
+          "url": "https://calendarmcp.googleapis.com/mcp/v1"
+        },
+        "google-drive": {
+          "type": "http",
+          "url": "https://drivemcp.googleapis.com/mcp/v1"
+        },
+        "gmail": {
+          "type": "http",
+          "url": "https://gmailmcp.googleapis.com/mcp/v1"
+        },
+        "microsoft-365": {
+          "type": "http",
+          "url": "https://microsoft365.mcp.claude.com/mcp"
+        }
+      }
     },
     {
       "name": "lich-thue-dn",
-      "source": "./",
-      "strict": false,
-      "skills": [
-        "./skills/lich-thue-dn"
-      ],
+      "source": "./skills/lich-thue-dn",
       "description": "Lập lịch hạn khai, nộp thuế và báo cáo tài chính cả năm cho doanh nghiệp nhỏ và vừa — GTGT và TNCN khấu trừ theo tháng (ngày 20) hoặc quý (ngày cuối tháng đầu quý sau), tạm nộp TNDN quý, quyết toán TNDN, TNCN và nộp BCTC (ngày cuối tháng thứ 3 sau năm), gia hạn nộp tiền 2026 theo NĐ 245/2026, tự lùi hạn trùng thứ Bảy, Chủ nhật, ngày lễ, báo hạn đã quá và sắp tới trong 60 ngày, xuất file .ics nhập Google Calendar, iPhone, Outlook có nhắc trước. Dùng khi người dùng hỏi \"lịch nộp thuế\", \"hạn nộp tờ khai quý này\", \"hạn quyết toán thuế\", \"khi nào phải nộp BCTC\", \"nhắc lịch thuế vào Google Calendar\", \"tháng này có hạn thuế gì\", \"đã trễ hạn chưa\".",
-      "category": "ke-toan-tai-chinh"
+      "category": "ke-toan-tai-chinh",
+      "mcpServers": {
+        "google-calendar": {
+          "type": "http",
+          "url": "https://calendarmcp.googleapis.com/mcp/v1"
+        },
+        "google-drive": {
+          "type": "http",
+          "url": "https://drivemcp.googleapis.com/mcp/v1"
+        },
+        "microsoft-365": {
+          "type": "http",
+          "url": "https://microsoft365.mcp.claude.com/mcp"
+        }
+      }
     },
     {
       "name": "luong-bao-hiem",
-      "source": "./",
-      "strict": false,
-      "skills": [
-        "./skills/luong-bao-hiem"
-      ],
+      "source": "./skills/luong-bao-hiem",
       "description": "Lập bảng lương tháng cho doanh nghiệp nhỏ và vừa năm 2026 — bảo hiểm bắt buộc phần người lao động (BHXH 8%, BHYT 1,5%, BHTN 1%) và phần doanh nghiệp (21,5%), KPCĐ 2%, trần đóng 50,6 triệu từ 01/07/2026, lương tối thiểu vùng, thuế TNCN khấu trừ theo biểu 5 bậc với giảm trừ 15,5 triệu và 6,2 triệu/người phụ thuộc, khấu trừ 10% cho hợp đồng dưới 3 tháng và cộng tác viên từ 5 triệu, ăn ca 1,2 triệu, làm thêm giờ miễn thuế, lương chủ TNHH MTV không được trừ TNDN; ra lương thực nhận, chi phí DN, bút toán 334/338/3335, Excel. Dùng khi người dùng nói \"tính lương\", \"bảng lương tháng\", \"đóng bảo hiểm bao nhiêu\", \"lương net gross\", \"khấu trừ thuế TNCN nhân viên\", \"trả cộng tác viên có khấu trừ 10% không\", \"hạch toán lương\".",
-      "category": "ke-toan-tai-chinh"
+      "category": "ke-toan-tai-chinh",
+      "mcpServers": {
+        "google-drive": {
+          "type": "http",
+          "url": "https://drivemcp.googleapis.com/mcp/v1"
+        },
+        "gmail": {
+          "type": "http",
+          "url": "https://gmailmcp.googleapis.com/mcp/v1"
+        },
+        "google-calendar": {
+          "type": "http",
+          "url": "https://calendarmcp.googleapis.com/mcp/v1"
+        },
+        "microsoft-365": {
+          "type": "http",
+          "url": "https://microsoft365.mcp.claude.com/mcp"
+        }
+      }
     },
     {
       "name": "thue-gtgt-dn",
-      "source": "./",
-      "strict": false,
-      "skills": [
-        "./skills/thue-gtgt-dn"
-      ],
+      "source": "./skills/thue-gtgt-dn",
       "description": "Tính và chuẩn bị số liệu khai thuế GTGT cho doanh nghiệp nhỏ và vừa năm 2026 — phương pháp khấu trừ (đầu ra trừ đầu vào đủ điều kiện, thuế còn được khấu trừ chuyển kỳ sau) hoặc trực tiếp theo tỷ lệ % doanh thu (1%, 3%, 5%, 2%); loại hóa đơn từ 5 triệu trả tiền mặt (kể cả cộng dồn cùng người bán cùng ngày), giảm thuế suất 8% đến 31/12/2026, kỳ khai tháng hay quý (doanh thu năm trước 50 tỷ), hạn nộp, bút toán khấu trừ 33311/1331, khai bổ sung, hoàn thuế. Dùng khi người dùng hỏi \"tính thuế GTGT quý này\", \"tờ khai 01/GTGT\", \"thuế VAT phải nộp bao nhiêu\", \"hóa đơn trả tiền mặt có được khấu trừ không\", \"còn được khấu trừ chuyển kỳ sau\", \"thuế suất 8% hay 10%\", \"khai thuế tháng hay quý\".",
-      "category": "ke-toan-tai-chinh"
+      "category": "ke-toan-tai-chinh",
+      "mcpServers": {
+        "google-drive": {
+          "type": "http",
+          "url": "https://drivemcp.googleapis.com/mcp/v1"
+        },
+        "gmail": {
+          "type": "http",
+          "url": "https://gmailmcp.googleapis.com/mcp/v1"
+        },
+        "google-calendar": {
+          "type": "http",
+          "url": "https://calendarmcp.googleapis.com/mcp/v1"
+        },
+        "microsoft-365": {
+          "type": "http",
+          "url": "https://microsoft365.mcp.claude.com/mcp"
+        }
+      }
     },
     {
       "name": "thue-nha-thau",
-      "source": "./",
-      "strict": false,
-      "skills": [
-        "./skills/thue-nha-thau"
-      ],
+      "source": "./skills/thue-nha-thau",
       "description": "Tính thuế nhà thầu nước ngoài (FCT) cho doanh nghiệp nhỏ và vừa Việt Nam năm 2026 — khi trả tiền cho tổ chức, cá nhân nước ngoài không có cơ sở thường trú (dịch vụ, phần mềm, tư vấn, bản quyền, lãi vay, cho thuê máy móc, xây lắp, vận chuyển): tỷ lệ GTGT (1%, 2%, 3%, 5%) và TNDN (0,1%–10%) theo ngành, hợp đồng giá net phải quy đổi gross-up hoặc giá gross khấu trừ khi trả, quy đổi ngoại tệ, bút toán 331/3338/1331, khai theo từng lần thanh toán, hiệp định tránh đánh thuế hai lần, mua quảng cáo Facebook, Google, TikTok và SaaS từ nhà cung cấp đã đăng ký thuế tại Việt Nam. Dùng khi người dùng hỏi \"thuế nhà thầu\", \"FCT\", \"trả tiền cho công ty nước ngoài\", \"hợp đồng net phải nộp thuế bao nhiêu\", \"mua phần mềm nước ngoài có phải khấu trừ thuế\", \"quảng cáo Facebook có chịu thuế nhà thầu không\".",
-      "category": "ke-toan-tai-chinh"
+      "category": "ke-toan-tai-chinh",
+      "mcpServers": {
+        "gmail": {
+          "type": "http",
+          "url": "https://gmailmcp.googleapis.com/mcp/v1"
+        },
+        "google-drive": {
+          "type": "http",
+          "url": "https://drivemcp.googleapis.com/mcp/v1"
+        },
+        "google-calendar": {
+          "type": "http",
+          "url": "https://calendarmcp.googleapis.com/mcp/v1"
+        },
+        "microsoft-365": {
+          "type": "http",
+          "url": "https://microsoft365.mcp.claude.com/mcp"
+        }
+      }
     },
     {
       "name": "thue-tndn",
-      "source": "./",
-      "strict": false,
-      "skills": [
-        "./skills/thue-tndn"
-      ],
+      "source": "./skills/thue-tndn",
       "description": "Tính và chuẩn bị số liệu thuế thu nhập doanh nghiệp (TNDN) kỳ 2026 cho doanh nghiệp nhỏ và vừa — thuế suất 15%/17%/20% theo doanh thu năm trước (Luật 67/2025), rà miễn TNDN doanh thu ≤1 tỷ (NĐ 141/2026) và giảm 30% kỳ 2026–2027 cho doanh thu ≤10 tỷ (NQ 43/2026), chuyển lợi nhuận kế toán thành thu nhập tính thuế (chi phí không được trừ: chi từ 5 triệu không chuyển khoản, lương chủ TNHH MTV cá nhân, tiền phạt, thiếu hóa đơn), chuyển lỗ, tạm nộp quý và mức 80%, gia hạn NĐ 245/2026, quyết toán năm, bút toán 821/3334. Dùng khi người dùng hỏi \"tính thuế TNDN\", \"quyết toán thuế TNDN\", \"tạm nộp TNDN quý\", \"thuế suất 15% hay 17%\", \"chi phí nào không được trừ\", \"lương giám đốc có được trừ không\", \"giảm 30% thuế TNDN\", \"miễn thuế doanh thu dưới 1 tỷ\".",
-      "category": "ke-toan-tai-chinh"
+      "category": "ke-toan-tai-chinh",
+      "mcpServers": {
+        "google-drive": {
+          "type": "http",
+          "url": "https://drivemcp.googleapis.com/mcp/v1"
+        },
+        "google-calendar": {
+          "type": "http",
+          "url": "https://calendarmcp.googleapis.com/mcp/v1"
+        },
+        "microsoft-365": {
+          "type": "http",
+          "url": "https://microsoft365.mcp.claude.com/mcp"
+        }
+      }
     },
     {
       "name": "tron-bo-skill-ke-toan",
       "source": "./",
-      "strict": false,
-      "skills": [
-        "./skills/bao-cao-tai-chinh",
-        "./skills/che-do-ke-toan",
-        "./skills/dinh-khoan",
-        "./skills/doc-hoa-don-xml",
-        "./skills/doi-soat",
-        "./skills/dong-tien-chu-dn",
-        "./skills/khoa-so-cuoi-ky",
-        "./skills/lich-thue-dn",
-        "./skills/luong-bao-hiem",
-        "./skills/thue-gtgt-dn",
-        "./skills/thue-nha-thau",
-        "./skills/thue-tndn"
-      ],
       "description": "Cài cả bộ 12 skill kế toán – tài chính cho DN nhỏ và vừa: bao-cao-tai-chinh, che-do-ke-toan, dinh-khoan, doc-hoa-don-xml, doi-soat, dong-tien-chu-dn, khoa-so-cuoi-ky, lich-thue-dn, luong-bao-hiem, thue-gtgt-dn, thue-nha-thau, thue-tndn.",
       "category": "ke-toan-tai-chinh"
     }

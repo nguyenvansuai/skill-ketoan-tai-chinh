@@ -49,3 +49,15 @@ So số dư sổ quỹ với tiền thực tế theo mệnh giá; thừa: Nợ 1
 1. Kết quả đối soát (bảng/Excel), bút toán điều chỉnh đề xuất, "Đã kiểm tra phép tính".
 2. Bảng **Cần anh/chị kiểm tra**: khoản chưa khớp, khoản cần điều tra, khách quá hạn lâu.
 3. Bước tiếp: skill `khoa-so-cuoi-ky`.
+
+<!-- KET-NOI:BAT-DAU (sinh tự động từ scripts/ket_noi.json – sửa ở đó rồi chạy build) -->
+## Kết nối ứng dụng
+
+Connector dùng cho skill này: **Gmail** · **Google Drive** · **Microsoft 365 (Outlook, OneDrive/SharePoint, Teams)**. Đọc quy tắc trong `references/ket-noi.md` trước khi dùng.
+
+1. Lấy sao kê ngân hàng gửi qua email (`from:` ngân hàng `has:attachment after:`) hoặc file trên Drive; lấy sổ TK 112, sổ công nợ người dùng xuất từ phần mềm.
+2. Lưu bảng đối soát, danh sách chênh lệch vào Drive.
+3. Tạo nháp email đối chiếu công nợ gửi khách hàng, nhà cung cấp kèm biên bản đối chiếu.
+
+**Khi chưa kết nối:** làm đủ phần soạn thảo, tính toán; đưa nội dung sẵn để người dùng tự dán vào email, lịch, thư mục; nhắc **một lần** cách bật connector, không dừng việc chỉ vì chưa kết nối.
+<!-- KET-NOI:KET-THUC -->

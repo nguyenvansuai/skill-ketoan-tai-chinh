@@ -33,9 +33,22 @@ Trên điện thoại: bấm vào tên file → nút **Download** (biểu tượ
 | 11 | Lịch thuế DN | `/lich-thue-dn` | Hạn khai, nộp cả năm (tháng/quý, tạm nộp TNDN, quyết toán, BCTC), gia hạn NĐ 245/2026, tự lùi ngày nghỉ, báo hạn đã quá/sắp tới, file .ics cho Google Calendar, iPhone |
 | 12 | Dòng tiền chủ DN | `/dong-tien-chu-dn` | Dự báo dòng tiền 13 tuần, kịch bản khách trả trễ, cảnh báo âm quỹ; điểm hòa vốn; so sánh kế hoạch – thực tế, lọc chênh lệch trọng yếu |
 
+## Connector
+
+<!-- KET-NOI-README:BAT-DAU (sinh tự động bởi scripts/ket_noi.py) -->
+Plugin **khai báo sẵn** connector: Gmail, Google Drive, Google Calendar, Microsoft 365 (Outlook, OneDrive/SharePoint, Teams). Cài plugin xong chỉ cần bấm kết nối và đăng nhập một lần (tab **Connectors** của plugin). Mỗi skill ghi rõ dùng connector vào việc gì; chưa kết nối thì skill vẫn chạy, chỉ không tự lấy dữ liệu hoặc tạo nháp được. Email chỉ tạo bản nháp, mọi thao tác ghi phải được bạn xác nhận. Chi tiết: [CONNECTORS.md](CONNECTORS.md).
+<!-- KET-NOI-README:KET-THUC -->
+
+Ví dụ việc skill làm qua connector: lấy hàng loạt file hóa đơn XML từ hộp thư nhà cung cấp gửi; lấy sao kê ngân hàng trong email hoặc Drive để đối soát; lưu bảng kê, BCTC, bảng lương vào Drive; đưa lịch hạn thuế cả năm vào lịch; tạo nháp email đối chiếu công nợ.
+
 ## Cài đặt
 
+### Claude Desktop / Cowork – cả bộ plugin (có connector)
+Tải [`dist/tron-bo-skill-ke-toan.plugin`](dist/) và cài plugin từ file (gồm toàn bộ skill và connector khai báo sẵn), rồi mở tab **Connectors** của plugin để kết nối. Khác với `tat-ca-skill.zip` (chỉ là các skill rời, không có connector).
+
 ### Claude.ai (web / app) – dễ nhất
+> Skill tải lên từng file zip không tự khai báo connector: bật Gmail, Google Drive, Google Calendar (và các dịch vụ khác ở mục Connector) trong **Settings → Connectors** để skill tự lấy dữ liệu, tạo nháp được.
+
 
 1. Bật **Settings → Capabilities → Code execution and file creation**.
 2. Vào **Settings → Capabilities → Skills → Upload skill**.

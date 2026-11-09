@@ -50,3 +50,14 @@ python3 scripts/tinh_tndn.py tam-nop --quy 3 --thu-nhap-luy-ke 600000000 --doanh
 3. Bảng **Cần anh/chị kiểm tra**: cờ của script (miễn ≤1 tỷ, NQ 43, thiếu 80%), khoản điều chỉnh [cần kiểm tra], chứng từ còn thiếu.
 4. Hạn: tạm nộp quý; quyết toán + BCTC ngày cuối tháng thứ 3 sau năm (năm 2026 → 31/03/2027) – lịch cả năm: skill `lich-thue-dn` (hạn trùng ngày nghỉ lùi sang ngày làm việc tiếp theo).
 5. Câu chốt: "Đối chiếu văn bản hiện hành và hỏi cơ quan thuế quản lý trước khi kê khai."
+
+<!-- KET-NOI:BAT-DAU (sinh tự động từ scripts/ket_noi.json – sửa ở đó rồi chạy build) -->
+## Kết nối ứng dụng
+
+Connector dùng cho skill này: **Google Drive** · **Google Calendar** · **Microsoft 365 (Outlook, OneDrive/SharePoint, Teams)**. Đọc quy tắc trong `references/ket-noi.md` trước khi dùng.
+
+1. Đọc BCTC, sổ chi phí trên Drive để rà chi phí không được trừ, tạm nộp quý.
+2. Tạo nhắc hạn tạm nộp quý, hạn quyết toán năm trên lịch; lưu bảng tính vào Drive.
+
+**Khi chưa kết nối:** làm đủ phần soạn thảo, tính toán; đưa nội dung sẵn để người dùng tự dán vào email, lịch, thư mục; nhắc **một lần** cách bật connector, không dừng việc chỉ vì chưa kết nối.
+<!-- KET-NOI:KET-THUC -->

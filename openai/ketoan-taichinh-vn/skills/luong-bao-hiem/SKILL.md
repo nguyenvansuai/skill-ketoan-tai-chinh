@@ -40,3 +40,15 @@ python3 scripts/tinh_luong.py bang_luong_10_2026.csv --ky 2026-10 --vung 1 --xls
 2. Bút toán: Nợ 6421/6422/154 / Có 334 (lương); Nợ 6421/6422/154 / Có 3383, 3384, 3385, 3382 (phần DN); Nợ 334 / Có 3383, 3384, 3385 (phần NLĐ); Nợ 334 / Có 3335; Nợ 334 / Có 112 (trả lương).
 3. Bảng **Cần anh/chị kiểm tra**: cảnh báo của script (dưới lương tối thiểu, vượt trần, ăn ca vượt, chủ DN), người phụ thuộc chưa đăng ký.
 4. Câu chốt: "Đối chiếu thông báo của cơ quan BHXH và văn bản hiện hành trước khi nộp."
+
+<!-- KET-NOI:BAT-DAU (sinh tự động từ scripts/ket_noi.json – sửa ở đó rồi chạy build) -->
+## Kết nối ứng dụng
+
+Connector dùng cho skill này: **Google Drive** · **Gmail** · **Google Calendar** · **Microsoft 365 (Outlook, OneDrive/SharePoint, Teams)**. Đọc quy tắc trong `references/ket-noi.md` trước khi dùng.
+
+1. Đọc bảng chấm công, danh sách nhân viên, hợp đồng (Sheets/Excel) trên Drive để lập bảng lương.
+2. Lưu bảng lương vào thư mục có giới hạn quyền; tạo nháp phiếu lương gửi **riêng từng người** (không gửi chung).
+3. Tạo nhắc hạn đóng BHXH, nộp thuế TNCN khấu trừ trên lịch.
+
+**Khi chưa kết nối:** làm đủ phần soạn thảo, tính toán; đưa nội dung sẵn để người dùng tự dán vào email, lịch, thư mục; nhắc **một lần** cách bật connector, không dừng việc chỉ vì chưa kết nối.
+<!-- KET-NOI:KET-THUC -->

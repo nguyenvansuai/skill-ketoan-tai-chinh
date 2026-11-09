@@ -6,7 +6,7 @@
 1. ChatGPT miễn phí: tạo Project mới, mở phần hướng dẫn (instructions) của Project. Bản trả phí: có thể tạo Custom GPT (Explore GPTs → Create → Configure).
 2. Name: `dong-tien-chu-dn`. Description: copy dòng Mô tả ở trên.
 3. Dán toàn bộ khối **Instructions** bên dưới vào ô hướng dẫn.
-4. Tải lên (Project files hoặc Knowledge) các file `skills/dong-tien-chu-dn/references/nguyen-tac-chung.md`, `skills/dong-tien-chu-dn/references/thue-dn-2026.md`, `skills/dong-tien-chu-dn/references/van-ban-hieu-luc.md`.
+4. Tải lên (Project files hoặc Knowledge) các file `skills/dong-tien-chu-dn/references/ket-noi.md`, `skills/dong-tien-chu-dn/references/nguyen-tac-chung.md`, `skills/dong-tien-chu-dn/references/thue-dn-2026.md`, `skills/dong-tien-chu-dn/references/van-ban-hieu-luc.md`.
 5. Bật **Code Interpreter & Data Analysis** và tải thêm `skills/dong-tien-chu-dn/scripts/dong_tien.py`.
 
 ## Instructions
@@ -62,4 +62,15 @@ python3 dong_tien.py so-sanh ke_hoach_thuc_te.csv --nguong-pt 10 --nguong-tien 2
 1. Bảng 13 tuần (Excel, số dư nối tiếp bằng công thức), tuần thấp nhất, tuần cảnh báo; hoặc kết quả hòa vốn; hoặc bảng chênh lệch; "Đã kiểm tra phép tính".
 2. 3–5 việc cần làm cụ thể theo thứ tự ưu tiên.
 3. Bảng **Cần anh/chị kiểm tra**: giả định xác suất thu, khoản chi thiếu (thuế, bảo hiểm, trả nợ), cách chia định phí – biến phí.
+
+<!-- KET-NOI:BAT-DAU (sinh tự động từ ket_noi.json – sửa ở đó rồi chạy build) -->
+## Kết nối ứng dụng
+
+Connector dùng cho skill này: **Google Drive** · **Gmail** · **Google Calendar** · **Microsoft 365 (Outlook, OneDrive/SharePoint, Teams)**. Đọc quy tắc trong `file Knowledge ket-noi.md` trước khi dùng.
+
+1. Lấy số dư, sao kê, công nợ phải thu – phải trả trên Drive hoặc email ngân hàng để dựng dự báo 13 tuần.
+2. Lưu bảng dự báo dòng tiền (Sheets) vào Drive; tạo nhắc các khoản chi lớn sắp đến hạn trên lịch.
+
+**Khi chưa kết nối:** làm đủ phần soạn thảo, tính toán; đưa nội dung sẵn để người dùng tự dán vào email, lịch, thư mục; nhắc **một lần** cách bật connector, không dừng việc chỉ vì chưa kết nối.
+<!-- KET-NOI:KET-THUC -->
 ````

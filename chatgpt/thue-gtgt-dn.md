@@ -6,7 +6,7 @@
 1. ChatGPT miễn phí: tạo Project mới, mở phần hướng dẫn (instructions) của Project. Bản trả phí: có thể tạo Custom GPT (Explore GPTs → Create → Configure).
 2. Name: `thue-gtgt-dn`. Description: copy dòng Mô tả ở trên.
 3. Dán toàn bộ khối **Instructions** bên dưới vào ô hướng dẫn.
-4. Tải lên (Project files hoặc Knowledge) các file `skills/thue-gtgt-dn/references/nguyen-tac-chung.md`, `skills/thue-gtgt-dn/references/thue-dn-2026.md`, `skills/thue-gtgt-dn/references/van-ban-hieu-luc.md`.
+4. Tải lên (Project files hoặc Knowledge) các file `skills/thue-gtgt-dn/references/ket-noi.md`, `skills/thue-gtgt-dn/references/nguyen-tac-chung.md`, `skills/thue-gtgt-dn/references/thue-dn-2026.md`, `skills/thue-gtgt-dn/references/van-ban-hieu-luc.md`.
 5. Bật **Code Interpreter & Data Analysis** và tải thêm `skills/thue-gtgt-dn/scripts/tinh_gtgt.py`.
 
 ## Instructions
@@ -57,4 +57,16 @@ python3 tinh_gtgt.py --truc-tiep hang-hoa=2400000000 dich-vu=300000000 --giam-20
 3. Bút toán: khấu trừ Nợ 33311 / Có 1331; nộp thuế Nợ 33311 / Có 112.
 4. Hạn khai, nộp của kỳ và hạn nộp tiền nếu được gia hạn (`file Knowledge thue-dn-2026.md` mục 6, 6a); lịch cả năm và file .ics: skill `lich-thue-dn`; hạn trùng thứ Bảy, Chủ nhật, ngày lễ lùi sang ngày làm việc tiếp theo.
 5. Câu chốt: "Đối chiếu tờ khai trên eTax/HTKK và hỏi cơ quan thuế quản lý trước khi nộp."
+
+<!-- KET-NOI:BAT-DAU (sinh tự động từ ket_noi.json – sửa ở đó rồi chạy build) -->
+## Kết nối ứng dụng
+
+Connector dùng cho skill này: **Google Drive** · **Gmail** · **Google Calendar** · **Microsoft 365 (Outlook, OneDrive/SharePoint, Teams)**. Đọc quy tắc trong `file Knowledge ket-noi.md` trước khi dùng.
+
+1. Lấy bảng kê hóa đơn mua vào/bán ra (từ skill `doc-hoa-don-xml` hoặc file trên Drive) để tính số liệu tờ khai.
+2. Tạo nhắc hạn nộp tờ khai và nộp tiền (ngày 20 hằng tháng hoặc ngày cuối tháng đầu quý sau) trên lịch.
+3. Lưu bảng tính số liệu tờ khai vào Drive.
+
+**Khi chưa kết nối:** làm đủ phần soạn thảo, tính toán; đưa nội dung sẵn để người dùng tự dán vào email, lịch, thư mục; nhắc **một lần** cách bật connector, không dừng việc chỉ vì chưa kết nối.
+<!-- KET-NOI:KET-THUC -->
 ````

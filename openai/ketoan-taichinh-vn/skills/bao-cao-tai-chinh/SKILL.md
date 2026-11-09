@@ -36,3 +36,14 @@ Từ số liệu B01a/B02 tính bằng code: biên lợi nhuận gộp (20/10), 
 2. Dàn ý thuyết minh B09-DNN theo `references/mau-bctc-tt133.md` với số liệu đã có, phần thiếu `[CẦN BỔ SUNG]`.
 3. Bảng **Cần anh/chị kiểm tra**: lỗi/cảnh báo của script, ánh xạ đặc thù [cần kiểm tra], chính sách kế toán.
 4. Nhắc: nộp cùng quyết toán TNDN trong 90 ngày (năm dương lịch: 31/03); người đại diện, người lập, kế toán trưởng/phụ trách kế toán ký. Câu chốt: "Bản nháp – kế toán trưởng hoặc dịch vụ kế toán soát xét trước khi ký nộp."
+
+<!-- KET-NOI:BAT-DAU (sinh tự động từ scripts/ket_noi.json – sửa ở đó rồi chạy build) -->
+## Kết nối ứng dụng
+
+Connector dùng cho skill này: **Google Drive** · **Gmail** · **Microsoft 365 (Outlook, OneDrive/SharePoint, Teams)**. Đọc quy tắc trong `references/ket-noi.md` trước khi dùng.
+
+1. Đọc bảng cân đối số phát sinh, BCTC năm trước trên Drive để lập nháp BCTC năm nay.
+2. Lưu file BCTC (Excel có công thức) vào Drive; tạo nháp email gửi giám đốc duyệt.
+
+**Khi chưa kết nối:** làm đủ phần soạn thảo, tính toán; đưa nội dung sẵn để người dùng tự dán vào email, lịch, thư mục; nhắc **một lần** cách bật connector, không dừng việc chỉ vì chưa kết nối.
+<!-- KET-NOI:KET-THUC -->

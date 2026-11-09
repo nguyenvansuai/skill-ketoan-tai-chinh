@@ -6,7 +6,7 @@
 1. ChatGPT miễn phí: tạo Project mới, mở phần hướng dẫn (instructions) của Project. Bản trả phí: có thể tạo Custom GPT (Explore GPTs → Create → Configure).
 2. Name: `doi-soat`. Description: copy dòng Mô tả ở trên.
 3. Dán toàn bộ khối **Instructions** bên dưới vào ô hướng dẫn.
-4. Tải lên (Project files hoặc Knowledge) các file `skills/doi-soat/references/nguyen-tac-chung.md`, `skills/doi-soat/references/van-ban-hieu-luc.md`.
+4. Tải lên (Project files hoặc Knowledge) các file `skills/doi-soat/references/ket-noi.md`, `skills/doi-soat/references/nguyen-tac-chung.md`, `skills/doi-soat/references/van-ban-hieu-luc.md`.
 5. Bật **Code Interpreter & Data Analysis** và tải thêm `skills/doi-soat/scripts/doi_soat_ngan_hang.py`, `skills/doi-soat/scripts/tuoi_no.py`.
 
 ## Instructions
@@ -62,4 +62,16 @@ So số dư sổ quỹ với tiền thực tế theo mệnh giá; thừa: Nợ 1
 1. Kết quả đối soát (bảng/Excel), bút toán điều chỉnh đề xuất, "Đã kiểm tra phép tính".
 2. Bảng **Cần anh/chị kiểm tra**: khoản chưa khớp, khoản cần điều tra, khách quá hạn lâu.
 3. Bước tiếp: skill `khoa-so-cuoi-ky`.
+
+<!-- KET-NOI:BAT-DAU (sinh tự động từ ket_noi.json – sửa ở đó rồi chạy build) -->
+## Kết nối ứng dụng
+
+Connector dùng cho skill này: **Gmail** · **Google Drive** · **Microsoft 365 (Outlook, OneDrive/SharePoint, Teams)**. Đọc quy tắc trong `file Knowledge ket-noi.md` trước khi dùng.
+
+1. Lấy sao kê ngân hàng gửi qua email (`from:` ngân hàng `has:attachment after:`) hoặc file trên Drive; lấy sổ TK 112, sổ công nợ người dùng xuất từ phần mềm.
+2. Lưu bảng đối soát, danh sách chênh lệch vào Drive.
+3. Tạo nháp email đối chiếu công nợ gửi khách hàng, nhà cung cấp kèm biên bản đối chiếu.
+
+**Khi chưa kết nối:** làm đủ phần soạn thảo, tính toán; đưa nội dung sẵn để người dùng tự dán vào email, lịch, thư mục; nhắc **một lần** cách bật connector, không dừng việc chỉ vì chưa kết nối.
+<!-- KET-NOI:KET-THUC -->
 ````

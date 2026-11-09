@@ -49,3 +49,14 @@ python3 scripts/dong_tien.py so-sanh ke_hoach_thuc_te.csv --nguong-pt 10 --nguon
 1. Bảng 13 tuần (Excel, số dư nối tiếp bằng công thức), tuần thấp nhất, tuần cảnh báo; hoặc kết quả hòa vốn; hoặc bảng chênh lệch; "Đã kiểm tra phép tính".
 2. 3–5 việc cần làm cụ thể theo thứ tự ưu tiên.
 3. Bảng **Cần anh/chị kiểm tra**: giả định xác suất thu, khoản chi thiếu (thuế, bảo hiểm, trả nợ), cách chia định phí – biến phí.
+
+<!-- KET-NOI:BAT-DAU (sinh tự động từ scripts/ket_noi.json – sửa ở đó rồi chạy build) -->
+## Kết nối ứng dụng
+
+Connector dùng cho skill này: **Google Drive** · **Gmail** · **Google Calendar** · **Microsoft 365 (Outlook, OneDrive/SharePoint, Teams)**. Đọc quy tắc trong `references/ket-noi.md` trước khi dùng.
+
+1. Lấy số dư, sao kê, công nợ phải thu – phải trả trên Drive hoặc email ngân hàng để dựng dự báo 13 tuần.
+2. Lưu bảng dự báo dòng tiền (Sheets) vào Drive; tạo nhắc các khoản chi lớn sắp đến hạn trên lịch.
+
+**Khi chưa kết nối:** làm đủ phần soạn thảo, tính toán; đưa nội dung sẵn để người dùng tự dán vào email, lịch, thư mục; nhắc **một lần** cách bật connector, không dừng việc chỉ vì chưa kết nối.
+<!-- KET-NOI:KET-THUC -->

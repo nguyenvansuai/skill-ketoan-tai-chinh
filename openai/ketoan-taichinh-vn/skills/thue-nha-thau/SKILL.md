@@ -41,3 +41,14 @@ Hoạt động: `hang-hoa`, `dich-vu`, `dich-vu-gan-hang-hoa`, `nha-hang-khach-s
 2. Bút toán: Nợ 6421/6422/242/211 và Nợ 1331 / Có 331; Nợ 331 / Có 3338 (thuế khấu trừ); Nợ 3338 / Có 112 (nộp thuế); Nợ 331 / Có 112 (trả nhà thầu).
 3. Bảng **Cần anh/chị kiểm tra**: tỷ lệ áp dụng, tình trạng đăng ký thuế của nhà cung cấp, hiệp định thuế, tỷ giá.
 4. Câu chốt: "Đối chiếu văn bản hiện hành và hỏi cơ quan thuế quản lý trước khi kê khai."
+
+<!-- KET-NOI:BAT-DAU (sinh tự động từ scripts/ket_noi.json – sửa ở đó rồi chạy build) -->
+## Kết nối ứng dụng
+
+Connector dùng cho skill này: **Gmail** · **Google Drive** · **Google Calendar** · **Microsoft 365 (Outlook, OneDrive/SharePoint, Teams)**. Đọc quy tắc trong `references/ket-noi.md` trước khi dùng.
+
+1. Đọc hợp đồng, hóa đơn (invoice) của bên nước ngoài trong email hoặc Drive để xác định loại thu nhập, giá đã gồm thuế hay chưa.
+2. Tạo nhắc hạn khai, nộp thuế nhà thầu (10 ngày kể từ ngày thanh toán) trên lịch; lưu bảng tính vào Drive.
+
+**Khi chưa kết nối:** làm đủ phần soạn thảo, tính toán; đưa nội dung sẵn để người dùng tự dán vào email, lịch, thư mục; nhắc **một lần** cách bật connector, không dừng việc chỉ vì chưa kết nối.
+<!-- KET-NOI:KET-THUC -->

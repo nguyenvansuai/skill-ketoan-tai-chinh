@@ -41,3 +41,14 @@ python3 scripts/kiem_tra_but_toan.py but_toan.csv --xlsx so_nhat_ky_chung.xlsx -
 1. Bảng bút toán (hoặc kết quả kiểm tra + file Excel), ghi "Đã kiểm tra phép tính" khi đã chạy script.
 2. Bảng **Cần anh/chị kiểm tra**: chứng từ thiếu, mục cảnh báo thuế, giả định phương pháp.
 3. Câu chốt: "Bút toán là bản nháp tham khảo – kế toán viên xác nhận trước khi ghi sổ chính thức."
+
+<!-- KET-NOI:BAT-DAU (sinh tự động từ scripts/ket_noi.json – sửa ở đó rồi chạy build) -->
+## Kết nối ứng dụng
+
+Connector dùng cho skill này: **Google Drive** · **Gmail** · **Microsoft 365 (Outlook, OneDrive/SharePoint, Teams)**. Đọc quy tắc trong `references/ket-noi.md` trước khi dùng.
+
+1. Đọc chứng từ (hóa đơn, phiếu thu chi, hợp đồng, sao kê) trên Drive hoặc tệp đính kèm email người dùng chỉ để định khoản đúng nội dung thật.
+2. Lưu bảng định khoản (Excel) vào thư mục kỳ kế toán để nhập phần mềm.
+
+**Khi chưa kết nối:** làm đủ phần soạn thảo, tính toán; đưa nội dung sẵn để người dùng tự dán vào email, lịch, thư mục; nhắc **một lần** cách bật connector, không dừng việc chỉ vì chưa kết nối.
+<!-- KET-NOI:KET-THUC -->

@@ -44,3 +44,15 @@ python3 scripts/tinh_gtgt.py --truc-tiep hang-hoa=2400000000 dich-vu=300000000 -
 3. Bút toán: khấu trừ Nợ 33311 / Có 1331; nộp thuế Nợ 33311 / Có 112.
 4. Hạn khai, nộp của kỳ và hạn nộp tiền nếu được gia hạn (`references/thue-dn-2026.md` mục 6, 6a); lịch cả năm và file .ics: skill `lich-thue-dn`; hạn trùng thứ Bảy, Chủ nhật, ngày lễ lùi sang ngày làm việc tiếp theo.
 5. Câu chốt: "Đối chiếu tờ khai trên eTax/HTKK và hỏi cơ quan thuế quản lý trước khi nộp."
+
+<!-- KET-NOI:BAT-DAU (sinh tự động từ scripts/ket_noi.json – sửa ở đó rồi chạy build) -->
+## Kết nối ứng dụng
+
+Connector dùng cho skill này: **Google Drive** · **Gmail** · **Google Calendar** · **Microsoft 365 (Outlook, OneDrive/SharePoint, Teams)**. Đọc quy tắc trong `references/ket-noi.md` trước khi dùng.
+
+1. Lấy bảng kê hóa đơn mua vào/bán ra (từ skill `doc-hoa-don-xml` hoặc file trên Drive) để tính số liệu tờ khai.
+2. Tạo nhắc hạn nộp tờ khai và nộp tiền (ngày 20 hằng tháng hoặc ngày cuối tháng đầu quý sau) trên lịch.
+3. Lưu bảng tính số liệu tờ khai vào Drive.
+
+**Khi chưa kết nối:** làm đủ phần soạn thảo, tính toán; đưa nội dung sẵn để người dùng tự dán vào email, lịch, thư mục; nhắc **một lần** cách bật connector, không dừng việc chỉ vì chưa kết nối.
+<!-- KET-NOI:KET-THUC -->

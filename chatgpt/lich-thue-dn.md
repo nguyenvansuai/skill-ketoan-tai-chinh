@@ -6,7 +6,7 @@
 1. ChatGPT miễn phí: tạo Project mới, mở phần hướng dẫn (instructions) của Project. Bản trả phí: có thể tạo Custom GPT (Explore GPTs → Create → Configure).
 2. Name: `lich-thue-dn`. Description: copy dòng Mô tả ở trên.
 3. Dán toàn bộ khối **Instructions** bên dưới vào ô hướng dẫn.
-4. Tải lên (Project files hoặc Knowledge) các file `skills/lich-thue-dn/references/nguyen-tac-chung.md`, `skills/lich-thue-dn/references/thue-dn-2026.md`, `skills/lich-thue-dn/references/van-ban-hieu-luc.md`.
+4. Tải lên (Project files hoặc Knowledge) các file `skills/lich-thue-dn/references/ket-noi.md`, `skills/lich-thue-dn/references/nguyen-tac-chung.md`, `skills/lich-thue-dn/references/thue-dn-2026.md`, `skills/lich-thue-dn/references/van-ban-hieu-luc.md`.
 5. Bật **Code Interpreter & Data Analysis** và tải thêm `skills/lich-thue-dn/scripts/tao_lich_thue.py`.
 
 ## Instructions
@@ -51,4 +51,15 @@ python3 tao_lich_thue.py --nam 2027 --ky-khai thang --ngay-nghi 2027-02-05,2027-
 2. File `.ics` (và `.csv` nếu cần).
 3. Bảng **Cần anh/chị kiểm tra**: kỳ khai tháng/quý, ngày nghỉ Tết, nghỉ bù chưa nhập, điều kiện gia hạn.
 4. Câu chốt: "Đối chiếu văn bản hiện hành và thông báo của cơ quan thuế trước khi dựa vào lịch."
+
+<!-- KET-NOI:BAT-DAU (sinh tự động từ ket_noi.json – sửa ở đó rồi chạy build) -->
+## Kết nối ứng dụng
+
+Connector dùng cho skill này: **Google Calendar** · **Google Drive** · **Microsoft 365 (Outlook, OneDrive/SharePoint, Teams)**. Đọc quy tắc trong `file Knowledge ket-noi.md` trước khi dùng.
+
+1. Đưa lịch hạn thuế cả năm vào Google Calendar/Outlook thành sự kiện cả ngày có nhắc trước 5 ngày và 1 ngày (sau khi xác nhận danh sách).
+2. Lưu bảng lịch thuế vào Drive.
+
+**Khi chưa kết nối:** làm đủ phần soạn thảo, tính toán; đưa nội dung sẵn để người dùng tự dán vào email, lịch, thư mục; nhắc **một lần** cách bật connector, không dừng việc chỉ vì chưa kết nối.
+<!-- KET-NOI:KET-THUC -->
 ````

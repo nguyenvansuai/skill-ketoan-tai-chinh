@@ -38,3 +38,13 @@ Kết quả: quy mô, các chế độ được áp dụng, cờ thuế cần r�
 2. Bảng việc phải làm: chế độ, hình thức sổ (Nhật ký chung…), bộ sổ tối thiểu, mẫu BCTC, người làm kế toán, lưu trữ 10 năm; nếu chuyển chế độ: chốt số dư cuối năm, chuyển số dư theo hướng dẫn (TT58 Đ.11), quy chế hạch toán nếu tự sửa mẫu (TT 46/2025).
 3. Bảng **Cần anh/chị kiểm tra**: ngưỡng NĐ 80 hiện hành, phương pháp thuế đã đăng ký, mục [cần kiểm tra].
 4. Câu chốt: "Đối chiếu văn bản hiện hành và hỏi kế toán hành nghề hoặc cơ quan thuế trước khi đổi chế độ."
+
+<!-- KET-NOI:BAT-DAU (sinh tự động từ scripts/ket_noi.json – sửa ở đó rồi chạy build) -->
+## Kết nối ứng dụng
+
+Connector dùng cho skill này: **Google Drive** · **Microsoft 365 (Outlook, OneDrive/SharePoint, Teams)**. Đọc quy tắc trong `references/ket-noi.md` trước khi dùng.
+
+1. Đọc BCTC, tờ khai năm trước trên Drive để xác định quy mô doanh nghiệp (doanh thu, lao động, nguồn vốn) thay vì hỏi lại.
+
+**Khi chưa kết nối:** làm đủ phần soạn thảo, tính toán; đưa nội dung sẵn để người dùng tự dán vào email, lịch, thư mục; nhắc **một lần** cách bật connector, không dừng việc chỉ vì chưa kết nối.
+<!-- KET-NOI:KET-THUC -->

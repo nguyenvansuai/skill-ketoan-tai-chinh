@@ -134,19 +134,16 @@ def sinh_chatgpt():
 
 
 def sinh_marketplace():
-    """Mỗi skill là 1 plugin; dùng kiểu khai báo của anthropics/skills (source "./", strict false, skills: [...])
-    để Claude Code tìm đúng SKILL.md mà không cần plugin.json trong từng thư mục."""
+    """Mỗi skill là 1 plugin (source ./skills/<x>); gói trọn bộ source "./" dùng .claude-plugin/plugin.json và .mcp.json ở gốc."""
     plugins = []
     ds = ds_skill()
     for sk in ds:
         meta, _ = tach_frontmatter((sk / "SKILL.md").read_text(encoding="utf-8"))
-        plugins.append({"name": sk.name, "source": "./", "strict": False, "skills": [f"./skills/{sk.name}"],
+        plugins.append({"name": sk.name, "source": f"./skills/{sk.name}",
                         "description": meta["description"], "category": DANH_MUC})
     plugins.append({
         "name": "tron-bo-skill-ke-toan",
         "source": "./",
-        "strict": False,
-        "skills": [f"./skills/{sk.name}" for sk in ds],
         "description": f"Cài cả bộ {len(ds)} skill kế toán – tài chính cho DN nhỏ và vừa: " + ", ".join(sk.name for sk in ds) + ".",
         "category": DANH_MUC,
     })
@@ -176,14 +173,21 @@ def dong_goi():
 
 
 if __name__ == "__main__":
+    import sys as _sys
+    _sys.path.insert(0, str(GOC / "scripts"))
+    import ket_noi
+    ket_noi.chuan_bi()
     dong_bo()
-    loi = kiem_tra()
+    loi = kiem_tra() + ket_noi.kiem_tra()
     if "--test" in sys.argv:
         print("Chạy self-test script:")
         loi += chay_self_test()
     canh_bao = sinh_chatgpt()
     sinh_marketplace()
     dong_goi()
+    ket_noi.hoan_tat()  # mcpServers cho skill lẻ + dist/<plugin>.plugin (sau dong_goi vì dong_goi xóa dist/)
+    import subprocess
+    subprocess.run([_sys.executable, str(GOC / "scripts" / "build_openai.py")], check=True)
     print(f"Đã build {len(ds_skill())} skill.")
     for c in canh_bao:
         print(c)

@@ -2,7 +2,7 @@
 """Sinh gói plugin cho ChatGPT / Codex (OpenAI) từ bộ skill của repo: python3 scripts/build_openai.py
 
 Đọc scripts/openai_config.json rồi tạo (ghi đè) thư mục openai/<tên-plugin>/ theo cấu trúc portable của OpenAI:
-  plugin.json (+ extensions.com.openai), skills/, mcp.json (nếu có MCP server), assets/
+  plugin.json (+ extensions.com.openai), skills/, .app.json (connector ChatGPT khai báo sẵn), assets/
 và file marketplace .agents/plugins/marketplace.json để cài qua Codex CLI / ChatGPT desktop.
 Theo hướng dẫn "Submit your Claude Code plugin to OpenAI":
   - commands/ và agents/ (chỉ Claude hiểu) được chuyển thành skill;
@@ -86,7 +86,7 @@ def sao_skills():
     return sorted(ten_da_co), chuyen
 
 
-def ghi_manifest(ds_skill):
+def ghi_manifest(ds_skill, co_app=False):
     goc_claude = GOC / ".claude-plugin" / "plugin.json"
     ver = json.loads(goc_claude.read_text(encoding="utf-8")).get("version", "1.0.0") if goc_claude.exists() else CH.get("version", "1.0.0")
     oa = {
@@ -104,6 +104,8 @@ def ghi_manifest(ds_skill):
             "logo": "./assets/logo.png",
         }
     }
+    if co_app:
+        oa["apps"] = "./.app.json"
     data = {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": TEN,
@@ -119,17 +121,20 @@ def ghi_manifest(ds_skill):
     (RA / "plugin.json").write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
-def ghi_mcp():
-    m = CH.get("mcp")
-    if not m:
+def lay_apps():
+    """Connector ChatGPT lấy từ scripts/ket_noi.json qua scripts/ket_noi.py (cùng danh mục với bản Claude)."""
+    if not (GOC / "scripts" / "ket_noi.json").exists():
+        return {}
+    import sys
+    sys.path.insert(0, str(GOC / "scripts"))
+    import ket_noi
+    return ket_noi.apps_chatgpt()
+
+
+def ghi_app(apps):
+    if not apps:
         return False
-    for d in m.get("thu_muc_kem", []):
-        shutil.copytree(GOC / d, RA / d, ignore=BO_QUA)
-    data = {"$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
-            "mcpServers": {m["name"]: {"type": "stdio", "command": m.get("command", "python3"),
-                                       "args": m["args"], "cwd": "${PLUGIN_ROOT}",
-                                       "env": {"PLUGIN_MCP_NAME": m["name"]}}}}
-    (RA / "mcp.json").write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    (RA / ".app.json").write_text(json.dumps({"apps": apps}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     return True
 
 
@@ -142,7 +147,7 @@ def ghi_assets():
     shutil.copy(icon, RA / "assets" / "logo.png")
 
 
-def ghi_readme(ds_skill, co_mcp, chuyen):
+def ghi_readme(ds_skill, apps, chuyen):
     dong = [f"# {CH['display_name']} – gói cho ChatGPT / Codex", "",
             "Thư mục này được sinh tự động bởi `scripts/build_openai.py` – không sửa tay.", "",
             CH["long_description"], "", f"## Skill ({len(ds_skill)})", ""]
@@ -150,9 +155,11 @@ def ghi_readme(ds_skill, co_mcp, chuyen):
     if chuyen:
         dong += ["", "Chuyển từ lệnh/agent của bản Claude:", ""] + [f"- {c}" for c in chuyen]
     dong += ["", "## Cài đặt", "", "Xem README ở gốc repo, mục **ChatGPT / Codex**."]
-    if co_mcp:
-        dong += ["", "Gói có MCP server chạy cục bộ (Python 3.8+) → chỉ dùng được trên **ChatGPT desktop / Codex**. "
-                 "Skill vẫn tự tính bằng `scripts/cong_cu.py` khi không có MCP."]
+    if apps:
+        dong += ["", "## Connector khai báo sẵn (`.app.json`)", "",
+                 "Khi cài plugin, ChatGPT đề nghị kết nối các ứng dụng: " + ", ".join(f"`{a}`" for a in apps)
+                 + ". Mỗi người đăng nhập một lần bằng tài khoản của mình. Chưa kết nối thì skill vẫn chạy, "
+                 "chỉ không tự lấy dữ liệu hoặc tạo nháp được."]
     (RA / "README.md").write_text("\n".join(dong) + "\n", encoding="utf-8")
 
 
@@ -205,14 +212,15 @@ if __name__ == "__main__":
     shutil.rmtree(RA, ignore_errors=True)
     RA.mkdir(parents=True)
     ds, chuyen = sao_skills()
-    ghi_manifest(ds)
-    co_mcp = ghi_mcp()
+    apps = lay_apps()
+    co_app = ghi_app(apps)
+    ghi_manifest(ds, co_app)
     ghi_assets()
-    ghi_readme(ds, co_mcp, chuyen)
+    ghi_readme(ds, apps, chuyen)
     ghi_marketplace()
     loi = kiem_tra(ds)
     z = dong_goi()
-    print(f"Gói ChatGPT/Codex: openai/{TEN}/ – {len(ds)} skill{' + MCP' if co_mcp else ''}; zip: {z.relative_to(GOC)}")
+    print(f"Gói ChatGPT/Codex: openai/{TEN}/ – {len(ds)} skill{f' + {len(apps)} connector' if apps else ''}; zip: {z.relative_to(GOC)}")
     for c in chuyen:
         print("  chuyển", c)
     if loi:

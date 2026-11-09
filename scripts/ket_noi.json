@@ -1,0 +1,101 @@
+{
+  "connectors": ["gmail", "google-drive", "google-calendar", "microsoft-365"],
+  "chung": [
+    "**Số liệu kế toán, thuế chỉ để đối chiếu, lập nháp**: không tự nộp tờ khai, không tự chuyển tiền, không trả lời cơ quan thuế thay doanh nghiệp. Bản chính thức do kế toán trưởng/người đại diện duyệt và tự nộp trên phần mềm hoặc cổng thuế.",
+    "**Hóa đơn, sao kê lấy từ email chỉ là bản sao**: luôn đối chiếu hóa đơn với dữ liệu tra cứu trên cổng hóa đơn điện tử của cơ quan thuế khi dùng để khấu trừ hoặc tính chi phí."
+  ],
+  "chua_co": [
+    "Phần mềm kế toán trong nước (MISA, Fast, Bravo, Smart Pro...): chưa có connector chính thức; xuất sổ, bảng cân đối phát sinh ra Excel rồi đưa vào chat.",
+    "Cổng thuế điện tử (eTax), cổng hóa đơn điện tử của Tổng cục Thuế, cổng BHXH: không có connector; tải file XML/Excel về rồi dùng skill.",
+    "Ngân hàng (sao kê): chưa có connector; tải sao kê Excel/PDF từ internet banking, hoặc lấy từ email ngân hàng gửi qua Gmail."
+  ],
+  "skills": {
+    "doc-hoa-don-xml": {
+      "dung": ["gmail", "google-drive"],
+      "viec": [
+        "Tìm thư nhà cung cấp gửi hóa đơn trong kỳ: `has:attachment filename:xml after:2026/10/01 before:2026/11/01` (thêm `subject:hóa đơn` nếu cần); lấy file XML đính kèm để đọc hàng loạt.",
+        "Hoặc đọc cả thư mục hóa đơn XML theo tháng trên Drive.",
+        "Lưu bảng kê mua vào/bán ra (Excel/Sheets) vào thư mục kỳ kế toán; tạo nháp email đề nghị nhà cung cấp xuất lại hóa đơn sai thông tin."
+      ]
+    },
+    "dinh-khoan": {
+      "dung": ["google-drive", "gmail"],
+      "viec": [
+        "Đọc chứng từ (hóa đơn, phiếu thu chi, hợp đồng, sao kê) trên Drive hoặc tệp đính kèm email người dùng chỉ để định khoản đúng nội dung thật.",
+        "Lưu bảng định khoản (Excel) vào thư mục kỳ kế toán để nhập phần mềm."
+      ]
+    },
+    "doi-soat": {
+      "dung": ["gmail", "google-drive"],
+      "viec": [
+        "Lấy sao kê ngân hàng gửi qua email (`from:` ngân hàng `has:attachment after:`) hoặc file trên Drive; lấy sổ TK 112, sổ công nợ người dùng xuất từ phần mềm.",
+        "Lưu bảng đối soát, danh sách chênh lệch vào Drive.",
+        "Tạo nháp email đối chiếu công nợ gửi khách hàng, nhà cung cấp kèm biên bản đối chiếu."
+      ]
+    },
+    "khoa-so-cuoi-ky": {
+      "dung": ["google-calendar", "google-drive", "gmail"],
+      "viec": [
+        "Tạo lịch các bước khóa sổ cuối tháng/quý/năm cho từng người (sau khi xác nhận), đúng thứ tự trong checklist.",
+        "Lưu checklist, bảng khấu hao, phân bổ vào Drive; tạo nháp email nhắc các bộ phận nộp chứng từ trước ngày khóa sổ."
+      ]
+    },
+    "bao-cao-tai-chinh": {
+      "dung": ["google-drive", "gmail"],
+      "viec": [
+        "Đọc bảng cân đối số phát sinh, BCTC năm trước trên Drive để lập nháp BCTC năm nay.",
+        "Lưu file BCTC (Excel có công thức) vào Drive; tạo nháp email gửi giám đốc duyệt."
+      ]
+    },
+    "che-do-ke-toan": {
+      "dung": ["google-drive"],
+      "viec": [
+        "Đọc BCTC, tờ khai năm trước trên Drive để xác định quy mô doanh nghiệp (doanh thu, lao động, nguồn vốn) thay vì hỏi lại."
+      ]
+    },
+    "thue-gtgt-dn": {
+      "dung": ["google-drive", "gmail", "google-calendar"],
+      "viec": [
+        "Lấy bảng kê hóa đơn mua vào/bán ra (từ skill `doc-hoa-don-xml` hoặc file trên Drive) để tính số liệu tờ khai.",
+        "Tạo nhắc hạn nộp tờ khai và nộp tiền (ngày 20 hằng tháng hoặc ngày cuối tháng đầu quý sau) trên lịch.",
+        "Lưu bảng tính số liệu tờ khai vào Drive."
+      ]
+    },
+    "thue-tndn": {
+      "dung": ["google-drive", "google-calendar"],
+      "viec": [
+        "Đọc BCTC, sổ chi phí trên Drive để rà chi phí không được trừ, tạm nộp quý.",
+        "Tạo nhắc hạn tạm nộp quý, hạn quyết toán năm trên lịch; lưu bảng tính vào Drive."
+      ]
+    },
+    "thue-nha-thau": {
+      "dung": ["gmail", "google-drive", "google-calendar"],
+      "viec": [
+        "Đọc hợp đồng, hóa đơn (invoice) của bên nước ngoài trong email hoặc Drive để xác định loại thu nhập, giá đã gồm thuế hay chưa.",
+        "Tạo nhắc hạn khai, nộp thuế nhà thầu (10 ngày kể từ ngày thanh toán) trên lịch; lưu bảng tính vào Drive."
+      ]
+    },
+    "luong-bao-hiem": {
+      "dung": ["google-drive", "gmail", "google-calendar"],
+      "viec": [
+        "Đọc bảng chấm công, danh sách nhân viên, hợp đồng (Sheets/Excel) trên Drive để lập bảng lương.",
+        "Lưu bảng lương vào thư mục có giới hạn quyền; tạo nháp phiếu lương gửi **riêng từng người** (không gửi chung).",
+        "Tạo nhắc hạn đóng BHXH, nộp thuế TNCN khấu trừ trên lịch."
+      ]
+    },
+    "lich-thue-dn": {
+      "dung": ["google-calendar", "google-drive"],
+      "viec": [
+        "Đưa lịch hạn thuế cả năm vào Google Calendar/Outlook thành sự kiện cả ngày có nhắc trước 5 ngày và 1 ngày (sau khi xác nhận danh sách).",
+        "Lưu bảng lịch thuế vào Drive."
+      ]
+    },
+    "dong-tien-chu-dn": {
+      "dung": ["google-drive", "gmail", "google-calendar"],
+      "viec": [
+        "Lấy số dư, sao kê, công nợ phải thu – phải trả trên Drive hoặc email ngân hàng để dựng dự báo 13 tuần.",
+        "Lưu bảng dự báo dòng tiền (Sheets) vào Drive; tạo nhắc các khoản chi lớn sắp đến hạn trên lịch."
+      ]
+    }
+  }
+}

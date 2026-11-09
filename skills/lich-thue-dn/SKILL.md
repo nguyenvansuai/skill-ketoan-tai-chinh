@@ -38,3 +38,14 @@ python3 scripts/tao_lich_thue.py --nam 2027 --ky-khai thang --ngay-nghi 2027-02-
 2. File `.ics` (và `.csv` nếu cần).
 3. Bảng **Cần anh/chị kiểm tra**: kỳ khai tháng/quý, ngày nghỉ Tết, nghỉ bù chưa nhập, điều kiện gia hạn.
 4. Câu chốt: "Đối chiếu văn bản hiện hành và thông báo của cơ quan thuế trước khi dựa vào lịch."
+
+<!-- KET-NOI:BAT-DAU (sinh tự động từ scripts/ket_noi.json – sửa ở đó rồi chạy build) -->
+## Kết nối ứng dụng
+
+Connector dùng cho skill này: **Google Calendar** · **Google Drive** · **Microsoft 365 (Outlook, OneDrive/SharePoint, Teams)**. Đọc quy tắc trong `references/ket-noi.md` trước khi dùng.
+
+1. Đưa lịch hạn thuế cả năm vào Google Calendar/Outlook thành sự kiện cả ngày có nhắc trước 5 ngày và 1 ngày (sau khi xác nhận danh sách).
+2. Lưu bảng lịch thuế vào Drive.
+
+**Khi chưa kết nối:** làm đủ phần soạn thảo, tính toán; đưa nội dung sẵn để người dùng tự dán vào email, lịch, thư mục; nhắc **một lần** cách bật connector, không dừng việc chỉ vì chưa kết nối.
+<!-- KET-NOI:KET-THUC -->

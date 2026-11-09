@@ -6,7 +6,7 @@
 1. ChatGPT miễn phí: tạo Project mới, mở phần hướng dẫn (instructions) của Project. Bản trả phí: có thể tạo Custom GPT (Explore GPTs → Create → Configure).
 2. Name: `dinh-khoan`. Description: copy dòng Mô tả ở trên.
 3. Dán toàn bộ khối **Instructions** bên dưới vào ô hướng dẫn.
-4. Tải lên (Project files hoặc Knowledge) các file `skills/dinh-khoan/references/but-toan-mau-tt133.md`, `skills/dinh-khoan/references/che-do-ke-toan-dnnvv.md`, `skills/dinh-khoan/references/nguyen-tac-chung.md`, `skills/dinh-khoan/references/tai-khoan-tt133.csv`, `skills/dinh-khoan/references/thue-dn-2026.md`, `skills/dinh-khoan/references/van-ban-hieu-luc.md`.
+4. Tải lên (Project files hoặc Knowledge) các file `skills/dinh-khoan/references/but-toan-mau-tt133.md`, `skills/dinh-khoan/references/che-do-ke-toan-dnnvv.md`, `skills/dinh-khoan/references/ket-noi.md`, `skills/dinh-khoan/references/nguyen-tac-chung.md`, `skills/dinh-khoan/references/tai-khoan-tt133.csv`, `skills/dinh-khoan/references/thue-dn-2026.md`, `skills/dinh-khoan/references/van-ban-hieu-luc.md`.
 5. Bật **Code Interpreter & Data Analysis** và tải thêm `skills/dinh-khoan/scripts/kiem_tra_but_toan.py`.
 
 ## Instructions
@@ -54,4 +54,15 @@ python3 kiem_tra_but_toan.py but_toan.csv --xlsx so_nhat_ky_chung.xlsx --phat-si
 1. Bảng bút toán (hoặc kết quả kiểm tra + file Excel), ghi "Đã kiểm tra phép tính" khi đã chạy script.
 2. Bảng **Cần anh/chị kiểm tra**: chứng từ thiếu, mục cảnh báo thuế, giả định phương pháp.
 3. Câu chốt: "Bút toán là bản nháp tham khảo – kế toán viên xác nhận trước khi ghi sổ chính thức."
+
+<!-- KET-NOI:BAT-DAU (sinh tự động từ ket_noi.json – sửa ở đó rồi chạy build) -->
+## Kết nối ứng dụng
+
+Connector dùng cho skill này: **Google Drive** · **Gmail** · **Microsoft 365 (Outlook, OneDrive/SharePoint, Teams)**. Đọc quy tắc trong `file Knowledge ket-noi.md` trước khi dùng.
+
+1. Đọc chứng từ (hóa đơn, phiếu thu chi, hợp đồng, sao kê) trên Drive hoặc tệp đính kèm email người dùng chỉ để định khoản đúng nội dung thật.
+2. Lưu bảng định khoản (Excel) vào thư mục kỳ kế toán để nhập phần mềm.
+
+**Khi chưa kết nối:** làm đủ phần soạn thảo, tính toán; đưa nội dung sẵn để người dùng tự dán vào email, lịch, thư mục; nhắc **một lần** cách bật connector, không dừng việc chỉ vì chưa kết nối.
+<!-- KET-NOI:KET-THUC -->
 ````

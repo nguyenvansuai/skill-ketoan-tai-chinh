@@ -1,0 +1,20 @@
+{
+  "name": "tron-bo-skill-ke-toan",
+  "version": "1.1.0",
+  "description": "Bộ 12 skill kế toán – tài chính cho doanh nghiệp nhỏ, vừa và siêu nhỏ Việt Nam 2026 (TT133/2016, TT58/2026, Luật TNDN 67/2025, NĐ 252/2026, NĐ 254/2026): chế độ kế toán, định khoản, đọc hóa đơn XML, đối soát, khóa sổ, BCTC, thuế GTGT, TNDN, nhà thầu, lương – bảo hiểm, lịch thuế, dòng tiền. Khai báo sẵn connector Gmail, Google Drive, Google Calendar, Microsoft 365.",
+  "author": {
+    "name": "nguyenvansuai",
+    "url": "https://github.com/nguyenvansuai"
+  },
+  "homepage": "https://github.com/nguyenvansuai/skill-ketoan-tai-chinh",
+  "repository": "https://github.com/nguyenvansuai/skill-ketoan-tai-chinh",
+  "license": "MIT",
+  "keywords": [
+    "ke-toan",
+    "thue",
+    "bctc",
+    "tt133",
+    "viet-nam"
+  ],
+  "privacyPolicyUrl": "https://github.com/nguyenvansuai/skill-ketoan-tai-chinh/blob/main/PRIVACY.md"
+}
